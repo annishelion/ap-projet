@@ -23,7 +23,6 @@ class Data
 private:
     static QString onlineId;
     static QString::iterator itonlineId;
-
     static QVector<user>::iterator ituser;
     static QVector<team>::iterator itteam;
     static QVector<project>::iterator itpro;
