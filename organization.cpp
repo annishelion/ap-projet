@@ -10,6 +10,7 @@ QString organization::get_name_of_organ(){
     return name_of_organ;
 
 }
+QVector<QString> get_members_of_organ();
 void organization::add_member_to_organ(QString _user){
     member_of_organ.push_back(_user);
 }
@@ -63,3 +64,11 @@ organization::organization(QString creator_organ , QString _name_of_organ):head_
 
 
 }
+bool organization::operator==(organization o){
+    if(this->get_name_of_organ() == o.get_name_of_organ() )
+        return 1;
+
+    else return 0;
+
+}
+

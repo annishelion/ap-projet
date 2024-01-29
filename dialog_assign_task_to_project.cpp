@@ -65,7 +65,7 @@ void Dialog_assign_task_to_project::on_assign_tasks_to_project_clicked()
 
     for (int a =0 ; Data::get_tasks().size() > a ;a++){
         if(Data::get_tasks()[a].get_name_of_task() == ui->task_input->text()){
-            Data::get_tasks()[a].set_user_Respons_the_task(ui->project_input->text());
+            Data::get_tasks()[a].set_project_Respons_the_task(ui->project_input->text());
 
         }
         this->close();

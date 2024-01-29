@@ -28,6 +28,10 @@ void delete_member_of_organ(QString _user);
 void delete_team_of_organ(QString _team);
 QString get_name_of_organ();
 void set_name_of_organ(QString s);
+QVector<QString> get_member_of_organ(){return member_of_organ;}
+void set_member_of_organ(QString s);
+bool operator==(organization o);
+
 };
 
 #endif // ORGANIZATION_H
