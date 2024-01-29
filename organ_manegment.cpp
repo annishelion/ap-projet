@@ -2,6 +2,8 @@
 #include "ui_organ_manegment.h"
 #include "data.h"
 #include "dialog_add_organ.h"
+#include "dialog_edit_organ.h"
+#include "dialog_remove_organ.h"
 organ_manegment::organ_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::organ_manegment)
@@ -31,5 +33,19 @@ void organ_manegment::on_show_my_organization_btn_clicked()
         }
 
          }
+}
+
+
+void organ_manegment::on_pushButton_2_clicked()
+{
+    Dialog_edit_organ *edit = new Dialog_edit_organ();
+    edit->show();
+}
+
+
+void organ_manegment::on_pushButton_3_clicked()
+{
+    Dialog_remove_organ *re = new Dialog_remove_organ(this);
+    re->show();
 }
 

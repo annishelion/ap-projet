@@ -13,11 +13,15 @@ SOURCES += \
     dialog_add_organ.cpp \
     dialog_add_task.cpp \
     dialog_asign_task_to_user.cpp \
+    dialog_assign_task_to_project.cpp \
+    dialog_assign_task_to_team.cpp \
     dialog_create_team.cpp \
     dialog_delete_task.cpp \
     dialog_delete_team.cpp \
+    dialog_edit_organ.cpp \
     dialog_edit_task.cpp \
     dialog_edit_team.cpp \
+    dialog_remove_organ.cpp \
     dialog_remove_user_from_team.cpp \
     dialog_signup.cpp \
     firstpage.cpp \
@@ -38,11 +42,15 @@ HEADERS += \
     dialog_add_organ.h \
     dialog_add_task.h \
     dialog_asign_task_to_user.h \
+    dialog_assign_task_to_project.h \
+    dialog_assign_task_to_team.h \
     dialog_create_team.h \
     dialog_delete_task.h \
     dialog_delete_team.h \
+    dialog_edit_organ.h \
     dialog_edit_task.h \
     dialog_edit_team.h \
+    dialog_remove_organ.h \
     dialog_remove_user_from_team.h \
     dialog_signup.h \
     firstpage.h \
@@ -61,11 +69,15 @@ FORMS += \
     dialog_add_organ.ui \
     dialog_add_task.ui \
     dialog_asign_task_to_user.ui \
+    dialog_assign_task_to_project.ui \
+    dialog_assign_task_to_team.ui \
     dialog_create_team.ui \
     dialog_delete_task.ui \
     dialog_delete_team.ui \
+    dialog_edit_organ.ui \
     dialog_edit_task.ui \
     dialog_edit_team.ui \
+    dialog_remove_organ.ui \
     dialog_remove_user_from_team.ui \
     dialog_signup.ui \
     firstpage.ui \

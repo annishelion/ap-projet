@@ -36,9 +36,9 @@ void Dialog_add_organ::on_add_organ_btn_clicked()
     orr.set_head_of_organ(Data::get_onlineId());
 
     Data::get_organs().append(orr);
-return ;
+//return ;
 
     //return;
-//this->close();
+  this->close();
 }
 

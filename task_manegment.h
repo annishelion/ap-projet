@@ -26,6 +26,10 @@ private slots:
 
     void on_assing_task_to_user_btn_clicked();
 
+    void on_assign_task_to_project_btn_clicked();
+
+    void on_assign_task_to_team_btn_clicked();
+
 private:
     Ui::task_manegment *ui;
 };

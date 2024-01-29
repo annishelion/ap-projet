@@ -39,12 +39,20 @@ QString task::get_user_Respons_the_task(){
     return username_Respons_the_task;
 
 }
+QString task::get_project_Respons_the_task(){
+    return project_Respons_the_task;
+
+}
 QString task::get_team_Respons_the_task(){
     return team_Respons_the_task;
 
 }
 void task::set_user_Respons_the_task(QString _user){
     username_Respons_the_task = _user;
+
+}
+void task::set_project_Respons_the_task(QString _project){
+    project_Respons_the_task = _project;
 
 }
 void task::set_team_Respons_the_task(QString _team){

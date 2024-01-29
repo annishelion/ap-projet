@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_asign_task_to_user</class>
- <widget class="QDialog" name="Dialog_asign_task_to_user">
+ <class>Dialog_edit_organ</class>
+ <widget class="QDialog" name="Dialog_edit_organ">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,44 +13,67 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="show_tasks_list">
+  <widget class="QListWidget" name="list">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>20</y>
-     <width>121</width>
-     <height>192</height>
+     <x>225</x>
+     <y>10</y>
+     <width>161</width>
+     <height>221</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="show_tasks">
+  <widget class="QPushButton" name="show">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>270</x>
+     <y>250</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>show organs</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="edit_organ">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
      <y>220</y>
      <width>75</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>show task</string>
+    <string>edit</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="user_input_">
+  <widget class="QLineEdit" name="old_name">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>50</y>
+     <y>40</y>
      <width>151</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="task_to_assign_input">
+  <widget class="QLineEdit" name="new_name">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>110</y>
+     <y>90</y>
+     <width>151</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="new_head">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>150</y>
      <width>151</width>
      <height>22</height>
     </rect>
@@ -59,40 +82,40 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>61</width>
+     <x>80</x>
+     <y>130</y>
+     <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>username</string>
+    <string>head of organ</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>90</y>
-     <width>49</width>
+     <x>70</x>
+     <y>70</y>
+     <width>91</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>task</string>
+    <string>new organ name</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="assign_btn">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>160</y>
-     <width>75</width>
-     <height>24</height>
+     <x>60</x>
+     <y>20</y>
+     <width>91</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>assign</string>
+    <string>old organ name</string>
    </property>
   </widget>
  </widget>

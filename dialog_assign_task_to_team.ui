@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog_asign_task_to_user</class>
- <widget class="QDialog" name="Dialog_asign_task_to_user">
+ <class>Dialog_assign_task_to_team</class>
+ <widget class="QDialog" name="Dialog_assign_task_to_team">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,45 +13,32 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="show_tasks_list">
+  <widget class="QListWidget" name="list">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>20</y>
-     <width>121</width>
-     <height>192</height>
+     <x>220</x>
+     <y>10</y>
+     <width>171</width>
+     <height>231</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="show_tasks">
+  <widget class="QLineEdit" name="tasks_input">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>220</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>show task</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="user_input_">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>151</width>
+     <x>40</x>
+     <y>100</y>
+     <width>113</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="task_to_assign_input">
+  <widget class="QLineEdit" name="team_input">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>110</y>
-     <width>151</width>
+     <x>40</x>
+     <y>170</y>
+     <width>113</width>
      <height>22</height>
     </rect>
    </property>
@@ -59,21 +46,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>61</width>
+     <x>70</x>
+     <y>150</y>
+     <width>49</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>username</string>
+    <string>team</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>90</y>
+     <x>70</x>
+     <y>80</y>
      <width>49</width>
      <height>16</height>
     </rect>
@@ -82,17 +69,30 @@
     <string>task</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="assign_btn">
+  <widget class="QPushButton" name="assign_tasks_to_team">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>160</y>
+     <x>60</x>
+     <y>240</y>
      <width>75</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>assign</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="show_tasks">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>260</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>show tasks</string>
    </property>
   </widget>
  </widget>

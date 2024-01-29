@@ -11,6 +11,7 @@ private:
     QString username_of_creator= "";
     QString name_of_task = "";
     QString username_Respons_the_task = "";
+    QString project_Respons_the_task = "";
     QString team_Respons_the_task = "";
     QString priority = "";
 
@@ -22,8 +23,10 @@ public:
     QString get_name_of_task();
     void set_name_of_task(QString _name);
     QString get_user_Respons_the_task();
+    QString get_project_Respons_the_task();
     QString get_team_Respons_the_task();
     void set_user_Respons_the_task(QString _user);
+    void set_project_Respons_the_task(QString _project);
     void set_team_Respons_the_task(QString _team);
     void set_priority_for_task(QString p);
     QString get_priority_for_task();

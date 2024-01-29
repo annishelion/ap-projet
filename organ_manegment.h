@@ -20,6 +20,10 @@ private slots:
 
     void on_show_my_organization_btn_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::organ_manegment *ui;
 };

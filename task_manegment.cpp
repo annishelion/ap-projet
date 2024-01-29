@@ -5,6 +5,8 @@
 #include "QMessageBox"
 #include "dialog_edit_task.h"
 #include "dialog_asign_task_to_user.h"
+#include "dialog_assign_task_to_project.h"
+#include "dialog_assign_task_to_team.h"
 task_manegment::task_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::task_manegment)
@@ -65,3 +67,17 @@ void task_manegment::on_assing_task_to_user_btn_clicked()
     tas->show();
 
 }
+
+void task_manegment::on_assign_task_to_project_btn_clicked()
+{
+    Dialog_assign_task_to_project *assign_to_project = new Dialog_assign_task_to_project();
+    assign_to_project ->show();
+}
+
+
+void task_manegment::on_assign_task_to_team_btn_clicked()
+{
+    Dialog_assign_task_to_team *assign_to_team = new Dialog_assign_task_to_team();
+    assign_to_team ->show();
+}
+

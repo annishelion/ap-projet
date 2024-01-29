@@ -10,7 +10,7 @@ void project::set_name_of_project(QString n){
 QString project::get_name_of_project(){
     return name_of_project;
 }
-void project::add_task_to_project(task t){
+void project::add_task_to_project(QString t){
     task_of_project.push_back(t);
 
 }
