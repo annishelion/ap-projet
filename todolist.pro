@@ -23,14 +23,19 @@ SOURCES += \
     dialog_edit_task.cpp \
     dialog_edit_team.cpp \
     dialog_remove_organ.cpp \
+    dialog_remove_user_from_organ.cpp \
     dialog_remove_user_from_team.cpp \
+    dialog_show_teams_of_organ.cpp \
     dialog_signup.cpp \
+    dialog_team_to_organ.cpp \
+    dialog_view_added_organ_to_organ.cpp \
     firstpage.cpp \
     main.cpp \
     mainwindow.cpp \
     organ_manegment.cpp \
     organization.cpp \
     project.cpp \
+    project_manegment.cpp \
     task.cpp \
     task_manegment.cpp \
     team.cpp \
@@ -53,13 +58,18 @@ HEADERS += \
     dialog_edit_task.h \
     dialog_edit_team.h \
     dialog_remove_organ.h \
+    dialog_remove_user_from_organ.h \
     dialog_remove_user_from_team.h \
+    dialog_show_teams_of_organ.h \
     dialog_signup.h \
+    dialog_team_to_organ.h \
+    dialog_view_added_organ_to_organ.h \
     firstpage.h \
     mainwindow.h \
     organ_manegment.h \
     organization.h \
     project.h \
+    project_manegment.h \
     task.h \
     task_manegment.h \
     team.h \
@@ -81,11 +91,16 @@ FORMS += \
     dialog_edit_task.ui \
     dialog_edit_team.ui \
     dialog_remove_organ.ui \
+    dialog_remove_user_from_organ.ui \
     dialog_remove_user_from_team.ui \
+    dialog_show_teams_of_organ.ui \
     dialog_signup.ui \
+    dialog_team_to_organ.ui \
+    dialog_view_added_organ_to_organ.ui \
     firstpage.ui \
     mainwindow.ui \
     organ_manegment.ui \
+    project_manegment.ui \
     task_manegment.ui \
     team_management.ui
 

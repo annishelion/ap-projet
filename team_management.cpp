@@ -3,11 +3,13 @@
 #include "dialog_create_team.h"
 #include "data.h"
 #include "QtAlgorithms"
+#include "dialog_team_to_organ.h"
 #include "algorithm"
 #include "dialog_delete_team.h"
 #include "dialog_add_member_to_team.h"
 #include "dialog_edit_team.h"
 #include "dialog_remove_user_from_team.h"
+#include "dialog_show_teams_of_organ.h"
 team_management::team_management(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::team_management)
@@ -69,5 +71,19 @@ void team_management::on_remove_user_from_organ_btn_clicked()
 {
 Dialog_remove_user_from_team *remo = new Dialog_remove_user_from_team();
 remo->show();
+}
+
+
+void team_management::on_teams_oforgan_btn_clicked()
+{
+    Dialog_show_teams_of_organ *sd = new Dialog_show_teams_of_organ();
+    sd->show();
+}
+
+
+void team_management::on_add_user_to_organ_btn_clicked()
+{
+    Dialog_team_to_organ *ee = new Dialog_team_to_organ();
+    ee->show();
 }
 

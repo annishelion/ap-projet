@@ -31,7 +31,10 @@ void set_name_of_organ(QString s);
 QVector<QString> get_member_of_organ(){return member_of_organ;}
 void set_member_of_organ(QString s);
 bool operator==(organization o);
-
+QVector<QString> get_organ_of_organ(){
+    return organ_of_organ;
+}
+QVector<QString> get_teams_of_organ(){return team_of_organ;}
 };
 
 #endif // ORGANIZATION_H
