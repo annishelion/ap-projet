@@ -32,6 +32,8 @@ private slots:
 
     void on_turn_over_to_my_tasks_btn_clicked();
 
+    void on_project_group_clicked();
+
 private:
     Ui::firstpage *ui;
 };

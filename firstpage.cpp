@@ -4,6 +4,7 @@
 #include "task_manegment.h"
 #include "organ_manegment.h"
 #include "data.h"
+#include "project_manegment.h"
 firstpage::firstpage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::firstpage)
@@ -98,5 +99,12 @@ void firstpage::on_turn_over_to_my_tasks_btn_clicked()
         }
 
 }
+}
+
+
+void firstpage::on_project_group_clicked()
+{
+    project_manegment *mo = new project_manegment();
+    mo->show();
 }
 
