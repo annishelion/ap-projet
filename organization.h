@@ -35,6 +35,7 @@ QVector<QString> get_organ_of_organ(){
     return organ_of_organ;
 }
 QVector<QString> get_teams_of_organ(){return team_of_organ;}
+QVector<QString> get_project_of_organ(){return projects_of_organ;}
 };
 
 #endif // ORGANIZATION_H
