@@ -14,8 +14,11 @@ private:
     QString project_Respons_the_task = "";
     QString team_Respons_the_task = "";
     QString priority = "";
+    bool is_archive = 0;
 
 public:
+    bool get_is_archive(){return is_archive;}
+        void set_is_archive(bool b){is_archive = b;}
     task(QString _name , QString _prio);
     task();
     //task(QString _name , user _user_respon);
