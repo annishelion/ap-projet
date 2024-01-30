@@ -14,8 +14,11 @@ private:
     QVector<QString> task_of_project;
     QVector<QString> users_of_project;
     QVector<QString> teams_of_project;
+    bool is_done = 0;
 
 public:
+    bool get_situation(){return is_done;}
+    void set_situation(bool i){is_done = i;}
     project();
     project(QString _name);
     void set_name_of_project(QString n);

@@ -30,7 +30,7 @@
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>450</y>
+       <y>440</y>
        <width>131</width>
        <height>29</height>
       </rect>
@@ -137,7 +137,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>29</y>
+      <y>30</y>
       <width>191</width>
       <height>471</height>
      </rect>
@@ -158,17 +158,17 @@
       <string>show team of organ</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="sieve_teams_btn">
+    <widget class="QPushButton" name="filter_teams_btn">
      <property name="geometry">
       <rect>
-       <x>22</x>
+       <x>20</x>
        <y>90</y>
        <width>141</width>
        <height>51</height>
       </rect>
      </property>
      <property name="text">
-      <string>sieve teams</string>
+      <string>filter teams</string>
      </property>
     </widget>
     <widget class="QPushButton" name="add_user_to_organ_btn">
