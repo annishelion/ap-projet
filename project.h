@@ -9,7 +9,7 @@
 #include "task.h"
 class project {
 private:
-    QString username_of_creator;
+    QString head_of_project = " ";
     QString name_of_project;
     QVector<QString> task_of_project;
     QVector<QString> users_of_project;
@@ -22,10 +22,12 @@ public:
     QString get_name_of_project();
     void add_task_to_project(QString t);
     bool operator==(project pro);
-    void set_username_of_creator(QString _user){
-        username_of_creator = _user;
+    void set_head_of_project(QString _user){
+        head_of_project = _user;
     }
-QString get_usrname_of_creator();
+    QString get_head_of_project(){return head_of_project;}
+    QVector<QString> get_users_of_project(){return users_of_project;}
+    void add_member(QString new_member);
 };
 
 #endif // PROJECT_H

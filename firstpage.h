@@ -24,6 +24,16 @@ private slots:
 
     void on_organ_group_clicked();
 
+    void on_show_my_tasks_btn_clicked();
+
+    void on_show_my_archive_btn_clicked();
+
+    void on_add_task_to_archive_btn_clicked();
+
+    void on_turn_over_to_my_tasks_btn_clicked();
+
+    void on_project_group_clicked();
+
 private:
     Ui::firstpage *ui;
 };

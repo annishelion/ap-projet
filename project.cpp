@@ -4,6 +4,10 @@
 #include "team.h"
 #include "project.h"
 
+void project::add_member(QString new_member){
+    users_of_project.append(new_member);
+}
+QVector<QString> get_users_of_project();
 void project::set_name_of_project(QString n){
     this->name_of_project = n;
 }
@@ -26,6 +30,4 @@ project::project(QString _name){
     name_of_project = _name;
 }
 
-QString get_usrname_of_creator(){
 
-}

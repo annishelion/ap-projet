@@ -32,7 +32,7 @@
        <x>20</x>
        <y>30</y>
        <width>171</width>
-       <height>351</height>
+       <height>321</height>
       </rect>
      </property>
     </widget>
@@ -57,6 +57,19 @@
        <width>171</width>
        <height>26</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="show_my_tasks_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>171</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>show</string>
      </property>
     </widget>
    </widget>
@@ -137,16 +150,6 @@
     <property name="title">
      <string>archive </string>
     </property>
-    <widget class="QListView" name="archive_task_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>31</y>
-       <width>171</width>
-       <height>351</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="turn_over_to_my_tasks_input">
      <property name="geometry">
       <rect>
@@ -168,6 +171,29 @@
      </property>
      <property name="text">
       <string>turn over to my tasks</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="show_my_archive_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>171</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>show</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="archive_list">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>171</width>
+       <height>321</height>
+      </rect>
      </property>
     </widget>
    </widget>

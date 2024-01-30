@@ -28,6 +28,10 @@ private slots:
 
     void on_remove_user_from_organ_btn_clicked();
 
+    void on_teams_oforgan_btn_clicked();
+
+    void on_add_user_to_organ_btn_clicked();
+
 private:
     Ui::team_management *ui;
 };

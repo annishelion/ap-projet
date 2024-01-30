@@ -10,7 +10,7 @@ QString organization::get_name_of_organ(){
     return name_of_organ;
 
 }
-QVector<QString> get_members_of_organ();
+
 void organization::add_member_to_organ(QString _user){
     member_of_organ.push_back(_user);
 }
@@ -20,7 +20,7 @@ void organization::set_name_of_organ(QString s){
 }
 
 void organization::add_team_organ(QString _team){
-    team_of_organ.push_back(_team);
+    team_of_organ.append(_team);
 }
 void organization::set_head_of_organ(QString _user){
     head_of_organ = _user;
