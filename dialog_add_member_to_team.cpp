@@ -73,7 +73,7 @@ void Dialog_add_member_to_team::on_add_user_to_team_btn_clicked()
 
                 Data::get_teams()[i].add_member(ui->name_of_user_input->text());
 
-                return;
+                this->close();
             }
 
 
