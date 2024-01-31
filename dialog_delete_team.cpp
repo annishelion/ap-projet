@@ -33,9 +33,9 @@ void Dialog_delete_team::on_buttonBox_accepted()
     ui->listWidget->clear();
      for (int i = 0; i < Data::get_teams().size(); i++) {
             if(Data::get_teams()[i].get_head_of_team() == Data::get_onlineId()){
-                Data::get_teams().erase(Data::get_teams().begin()+i);
+                Data::get_teams().erase(Data::get_teams().cbegin()+i);
                 return;
-
+//mixing etrtators with const_iterators
 }
 }
  QMessageBox::warning(this, "تذکر", " شما تیمی بااین اسم ایجاد نکرده اید!");

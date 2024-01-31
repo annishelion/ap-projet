@@ -63,12 +63,11 @@ void Dialog_remove_user_from_team::on_remove_btn_clicked()
            if(Data::get_teams()[a].get_name_of_team() == ui->team_input->text())
                    for(int i =0 ; Data::get_teams()[a].get_members_of_team().size(); i++){
                         if(Data::get_teams()[a].get_members_of_team()[i] == ui->user_removed_input->text()){
-
-                          //  Data::get_teams()[a].get_members_of_team().erase(std::remove(Data::get_teams()[a].get_members_of_team().begin(), Data::get_teams()[a].get_members_of_team().end(), i), Data::get_teams()[a].get_members_of_team().end());
+// Data::get_teams()[a].get_members_of_team().erase(std::remove(Data::get_teams()[a].get_members_of_team().cbegin(), Data::get_teams()[a].get_members_of_team().end(), i), Data::get_teams()[a].get_members_of_team().end());
 
                             //Data::get_teams()[a].get_members_of_team().erase(Data::get_teams()[a].get_members_of_team().begin() + i );
-                       //  Data::get_teams()[a].get_members_of_team().erase(Data::get_teams()[a].get_members_of_team().begin() + i);
-                        return;
+                        Data::get_teams()[a].get_members_of_team().erase(Data::get_teams()[a].get_members_of_team().cbegin() + i);
+                        this->close();
                         }
 
                    }

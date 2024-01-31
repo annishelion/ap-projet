@@ -4,7 +4,10 @@
 #include "dialog_add_project.h"
 #include "dialog_add_member_to_project.h"
 #include "dialog_remove_user_from_project.h"
-
+#include "dialog_edit_project.h"
+#include "data.h"
+#include "dialog_delete_project.h"
+#include "dialog_show_oroject_of_organ.h"
 project_manegment::project_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::project_manegment)
@@ -42,5 +45,40 @@ void project_manegment::on_pushButton_6_clicked()
 {
     Dialog_remove_user_from_project* remove = new Dialog_remove_user_from_project();
     remove->show();
+}
+
+
+void project_manegment::on_pushButton_5_clicked()
+{
+    Dialog_edit_project *aaa = new Dialog_edit_project();
+    aaa->show();
+}
+
+
+void project_manegment::on_pushButton_9_clicked()
+{
+    {
+        ui->listWidget->clear();
+        for (int i = 0; i < Data::get_projects().size(); i++) {
+            if (Data::get_onlineId() == Data::get_projects()[i].get_head_of_project()) {
+                ui->listWidget->addItem(Data::get_projects()[i].get_name_of_project());
+            }
+        }
+
+    }
+}
+
+
+void project_manegment::on_pushButton_3_clicked()
+{
+    Dialog_delete_project *zz = new Dialog_delete_project();
+    zz->show();
+}
+
+
+void project_manegment::on_pushButton_7_clicked()
+{
+    Dialog_show_oroject_of_organ *g = new Dialog_show_oroject_of_organ();
+    g->show();
 }
 
