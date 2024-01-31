@@ -10,6 +10,7 @@ firstpage::firstpage(QWidget *parent) :
     ui(new Ui::firstpage)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
 }
 
 firstpage::~firstpage()
@@ -106,5 +107,12 @@ void firstpage::on_project_group_clicked()
 {
     project_manegment *mo = new project_manegment();
     mo->show();
+}
+
+
+void firstpage::on_actionexit_triggered()
+{
+    //Data::write_on_file();
+    this->close();
 }
 
