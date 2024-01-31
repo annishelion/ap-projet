@@ -31,7 +31,7 @@ void Dialog_add_member_to_project::on_add_clicked()
 {
     if(ui->enter_project->text().isEmpty() || ui->enter_username->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!!", "Please fill the items!!");
         return;
     }
     int flag =0 ;
@@ -40,7 +40,7 @@ void Dialog_add_member_to_project::on_add_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No person found with this username!");
         return;
 
     }
@@ -51,7 +51,7 @@ void Dialog_add_member_to_project::on_add_clicked()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " پروژه ای با این نام یافت نشد!");
+        QMessageBox::warning(this, "error!", "No project found with this name!");
         return;
 
     }
@@ -65,7 +65,7 @@ void Dialog_add_member_to_project::on_add_clicked()
         if(Data::get_projects()[i].get_head_of_project() == Data::get_onlineId() && Data::get_projects()[i] == ui->enter_project->text()){
             for(int a =0 ; Data::get_projects()[i].get_users_of_project().size() > a ; a++){
                 if(Data::get_projects()[i].get_users_of_project()[a] == ui->enter_username->text()){
-                    QMessageBox::warning(this, "تذکر", " این شخص در این پروژه عضو است!");
+                    QMessageBox::warning(this, "error!", " This person is a member of this project!");
                     return;
                 }
             }

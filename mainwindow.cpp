@@ -183,7 +183,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_SignUpBtn_clicked()
 {
-    Dialog_signUp *s = new Dialog_signUp();
+    Dialog_signUp *s = new Dialog_signUp(this);
     s->show();
 }
 
@@ -193,7 +193,7 @@ void MainWindow::on_SignInBtn_clicked()
     user d("mahdi" , "1" , "1" , "1");
     Data::get_players().append(d);
     if (ui->usernameInput->text().isEmpty() || ui->passwordInput->text().isEmpty()) {
-        QMessageBox::warning(this, "تذکر", "نام کاربری و رمز عبور نمی تواند خالی باشد!");
+        QMessageBox::warning(this, "error", "Enter your username and your password!");
         return;
     }
     for (int i = 0; i < (Data::get_players()).size(); i++)
@@ -211,10 +211,10 @@ void MainWindow::on_SignInBtn_clicked()
                 return;
             }
             else {
-                QMessageBox::warning(this, "تذکر", "رمز عبور اشتباه است!");
+                QMessageBox::warning(this, "error", "Please check your password and try again.!");
                 return;
             }
         }
-    QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
+    QMessageBox::warning(this, "error", "Please check your account name and try again.!");
 }
 

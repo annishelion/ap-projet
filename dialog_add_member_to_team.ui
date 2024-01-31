@@ -29,11 +29,17 @@
   <widget class="QPushButton" name="show_teams_btn">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>260</y>
-     <width>93</width>
-     <height>29</height>
+     <x>280</x>
+     <y>30</y>
+     <width>81</width>
+     <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>show</string>
@@ -43,43 +49,60 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>100</y>
+     <y>10</y>
      <width>141</width>
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>enter username</string>
+    <string>my teams</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="name_of_tam_input">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>50</y>
-     <width>151</width>
-     <height>26</height>
+     <y>120</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Name of team</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="name_of_user_input">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>120</y>
-     <width>151</width>
-     <height>26</height>
+     <y>170</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Usernmae</string>
    </property>
   </widget>
   <widget class="QPushButton" name="add_user_to_team_btn">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>160</y>
-     <width>93</width>
-     <height>29</height>
+     <x>30</x>
+     <y>220</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>add to team</string>
@@ -88,10 +111,10 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>20</y>
-     <width>151</width>
-     <height>231</height>
+     <x>30</x>
+     <y>30</y>
+     <width>221</width>
+     <height>71</height>
     </rect>
    </property>
   </widget>

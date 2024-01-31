@@ -25,7 +25,7 @@ void Dialog_add_user_to_organ::on_add_clicked()
 
     if(ui->enter_organ->text().isEmpty() || ui->enter_username->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " Please fill the items!");
         return;
     }
     int flag =0 ;
@@ -34,7 +34,7 @@ void Dialog_add_user_to_organ::on_add_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No person found with this username!");
         return;
 
     }
@@ -45,7 +45,7 @@ void Dialog_add_user_to_organ::on_add_clicked()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " تیمی با این نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No team found with this name!");
         return;
 
     }
@@ -59,7 +59,7 @@ void Dialog_add_user_to_organ::on_add_clicked()
         if(Data::get_organs()[i].get_head_of_organ() == Data::get_onlineId() && Data::get_organs()[i].get_name_of_organ() == ui->enter_organ->text()){
             for(int a =0 ; Data::get_organs()[i].get_member_of_organ().size() > a ; a++){
                 if(Data::get_organs()[i].get_member_of_organ()[a] == ui->enter_username->text()){
-                    QMessageBox::warning(this, "تذکر", " این شخص در این تیم عضو است!");
+                    QMessageBox::warning(this, "error!", " This person is a member of this team!");
                     return;
                 }
             }

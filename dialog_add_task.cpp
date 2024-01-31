@@ -18,7 +18,7 @@ Dialog_add_task::~Dialog_add_task()
 void Dialog_add_task::on_buttonBox_accepted()
 {
     if (ui->priority_input->text().isEmpty() || ui->name_of_task_input->text().isEmpty()) {
-        QMessageBox::warning(this, "تذکر", "همه فیلدها باید پر شوند!");
+        QMessageBox::warning(this, "error!", "Pleae fill the items!");
         return;
     }
     task u(" "," ");

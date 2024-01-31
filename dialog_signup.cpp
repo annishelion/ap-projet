@@ -8,6 +8,9 @@ Dialog_signUp::Dialog_signUp(QWidget *parent) :
     ui(new Ui::Dialog_signUp)
 {
     ui->setupUi(this);
+    setMinimumSize(300,300);
+       setMaximumSize(300,300);
+
 }
 
 Dialog_signUp::~Dialog_signUp()
@@ -19,18 +22,18 @@ void Dialog_signUp::on_buttonBox_accepted()
 {
     if (ui->name_input->text().isEmpty() || ui->username_input->text().isEmpty() || ui->password_input->text().isEmpty() || ui->email_input->text().isEmpty()
             ) {
-        QMessageBox::warning(this, "تذکر", "همه فیلدها باید پر شوند!");
+        QMessageBox::warning(this, "error", "Please fill in the Confirms your information!");
         return;
     }
    // if(ui->password_input->text().size() < 9)
    // {
-      //  QMessageBox::warning(this, "تذکر", "رمز باید بیشتر از ۸ رقم باشد!");
+      //  QMessageBox::warning(this, "error", "Password must be more than 8 digits!");
       //  return;
 
     //}
     for (int i = 0; i < Data::get_players().size(); i++) {
         if (ui->username_input->text() == Data::get_players()[i].get_username()) {
-            QMessageBox::warning(this, "تذکر", "این نام کاربری قبلا استفاده شده است!");
+            QMessageBox::warning(this, "error", "Repetitious username!");
             return;
         }
     }
@@ -56,7 +59,7 @@ void Dialog_signUp::on_buttonBox_accepted()
     f.open(QIODevice::WriteOnly);
     f.write(d.toJson());
     f.close();
-    QMessageBox::information(this, "تکمیل ثبت نام", "ثبت نام شما با موفقیت انجام شد");
+    QMessageBox::information(this, "Complete registration", "Your registration was successful");
     /*
      *
     QFile f("Players.json");

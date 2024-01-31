@@ -16,54 +16,52 @@
   <widget class="QListWidget" name="list">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>10</y>
-     <width>171</width>
-     <height>231</height>
+     <x>30</x>
+     <y>40</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="tasks_input">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>100</y>
-     <width>113</width>
-     <height>22</height>
+     <x>30</x>
+     <y>140</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Task</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="team_input">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>170</y>
-     <width>113</width>
-     <height>22</height>
+     <x>30</x>
+     <y>190</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>150</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>team</string>
+   <property name="placeholderText">
+    <string> Team</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>80</y>
+     <x>40</x>
+     <y>20</y>
      <width>49</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>task</string>
@@ -72,11 +70,17 @@
   <widget class="QPushButton" name="assign_tasks_to_team">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>30</x>
      <y>240</y>
-     <width>75</width>
-     <height>24</height>
+     <width>241</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>assign</string>
@@ -85,14 +89,20 @@
   <widget class="QPushButton" name="show_tasks">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>260</y>
+     <x>290</x>
+     <y>40</y>
      <width>75</width>
-     <height>24</height>
+     <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>show tasks</string>
+    <string>show</string>
    </property>
   </widget>
  </widget>

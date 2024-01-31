@@ -32,7 +32,7 @@ void Dialog_assign_task_to_team::on_assign_tasks_to_team_clicked()
 {
     if(ui->team_input->text().isEmpty() || ui->tasks_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+       QMessageBox::warning(this, "error!", " please fill the items!");
         return;
     }
 
