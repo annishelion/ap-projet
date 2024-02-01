@@ -29,7 +29,7 @@ void Dialog_delete_task::on_buttonBox_accepted()
 {
     if( ui->delete_task_btn->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+    QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
 

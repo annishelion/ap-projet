@@ -33,7 +33,7 @@ void Dialog_assign_task_to_project::on_assign_tasks_to_project_clicked()
 {
     if(ui->project_input->text().isEmpty() || ui->task_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
         return;
     }
 
@@ -44,7 +44,7 @@ void Dialog_assign_task_to_project::on_assign_tasks_to_project_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " پروژه ای بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No project with this name was found!");
         return;
 
     }

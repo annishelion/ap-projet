@@ -31,7 +31,7 @@ void Dialog_remove_user_from_organ::on_buttonBox_accepted()
 {
     if(ui->organ_input->text().isEmpty() || ui->user_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+  QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
  int flag =0 ;
@@ -61,7 +61,7 @@ void Dialog_remove_user_from_organ::on_buttonBox_accepted()
                         if(Data::get_organs()[a].get_member_of_organ()[i] == ui->user_input->text()){
 
                             //Data::get_organs()[a].get_member_of_organ().erase(std::remove(Data::get_teams()[a].get_members_of_team().begin(), Data::get_teams()[a].get_members_of_team().end(), i), Data::get_teams()[a].get_members_of_team().end());
-Data::get_organs()[a].get_member_of_organ().erase(Data::get_organs()[a].get_member_of_organ().begin()+i);
+Data::get_organs()[a].get_member_of_organ().erase(Data::get_organs()[a].get_member_of_organ().cbegin()+i);
 //Data::get_organs()[a].get_member_of_organ().erase(Data::get_organs()[a].get_member_of_organ().begin() + i );
                        //  Data::get_teams()[a].get_members_of_team().erase(Data::get_teams()[a].get_members_of_team().begin() + i);
                         return;

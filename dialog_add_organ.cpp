@@ -18,14 +18,14 @@ void Dialog_add_organ::on_add_organ_btn_clicked()
 {
     if( ui->add_organ_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " Please fill the items!");
     return;
     }
 
     for(int i =0 ; Data::get_organs().size() > i ; i++){
         if(Data::get_organs()[i].get_name_of_organ() == ui->add_organ_input->text())
         {
-            QMessageBox::warning(this, "تذکر", "اسم سازمان تکراری است!");
+            QMessageBox::warning(this, "error!", "The name of the organization is repeated!");
             return;
         }
 

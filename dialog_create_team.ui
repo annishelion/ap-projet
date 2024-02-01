@@ -22,6 +22,11 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -35,8 +40,11 @@
      <x>22</x>
      <y>110</y>
      <width>351</width>
-     <height>26</height>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Name of team</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -48,8 +56,14 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>enter name of team</string>
+    <string>create team</string>
    </property>
   </widget>
  </widget>

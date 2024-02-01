@@ -35,7 +35,7 @@ void Dialog_remove_user_from_team::on_remove_btn_clicked()
 {
     if(ui->team_input->text().isEmpty() || ui->user_removed_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
  int flag =0 ;

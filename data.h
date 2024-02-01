@@ -67,15 +67,88 @@ static QVector<task>& get_tasks() { return tasks ; }
 
 static QString& get_onlineId() { return onlineId ; }
 static void set_onlineId(QString _onl){ onlineId=_onl; }
- //
-//static void write_on_file() {
-  //  QFile f("Players.json");
-    //f.open(QIODevice::ReadOnly);
-    //QJsonDocument d = QJsonDocument::fromJson(f.readAll());
-    //f.close();
-    //QJsonObject o = d.object();
-    //QJsonObject temp = o[get_iterator_user()->get_username()].toObject();
-//temp["Name"] = get_iterator_user()->get_Name();
+
+static void write_on_file() {
+    QFile f("Players.json");
+    f.open(QIODevice::ReadOnly);
+    QJsonDocument d = QJsonDocument::fromJson(f.readAll());
+    f.close();
+    QJsonObject o = d.object();
+    QJsonObject temp = o[get_iterator_user()->get_username()].toObject();
+//user header
+    temp["Name"] = get_iterator_user()->get_Name();
+temp["username"] = get_iterator_user()->get_username();
+temp["email"] = get_iterator_user()->get_email();
+temp["password"] = get_iterator_user()->get_password();
+
+//task header
+temp["Name of task"] = get_iterator_task()->get_name_of_task();
+temp["priority"] = get_iterator_task()->get_priority_for_task();
+temp["project respons"] = get_iterator_task()->get_project_Respons_the_task();
+temp["team respons"] = get_iterator_task()->get_team_Respons_the_task();
+temp["user respons"] = get_iterator_task()->get_user_Respons_the_task();
+temp["username creator"] = get_iterator_task()->get_username_of_cteator();
+temp["archive"] = get_iterator_task()->get_is_archive();
+
+//team header
+temp["head of team"] = get_iterator_team()->get_head_of_team();
+temp["name of team"] = get_iterator_team()->get_name_of_team();
+//temp["archive"] = get_iterator_team()->get_members_of_team();
+QJsonArray arr8;
+for (int i = 0; i < get_iterator_team()->get_members_of_team().size(); i++) {
+    arr8.push_back(get_iterator_team()->get_members_of_team()[i]);}
+temp["users of team"] = arr8;
+
+//organization header
+temp["head of organ"] = get_iterator_organ()->get_head_of_organ();
+temp["name of organ"] = get_iterator_organ()->get_name_of_organ();
+//temp["archive"] = get_iterator_organ()->get_member_of_organ();
+QJsonArray arr4;
+for (int i = 0; i < get_iterator_organ()->get_member_of_organ().size(); i++) {
+    arr4.push_back(get_iterator_organ()->get_member_of_organ()[i]);}
+temp["users of organ"] = arr4;
+//temp["archive"] = get_iterator_organ()->get_organ_of_organ();
+QJsonArray arr5;
+for (int i = 0; i < get_iterator_organ()->get_organ_of_organ().size(); i++) {
+    arr5.push_back(get_iterator_organ()->get_organ_of_organ()[i]);}
+temp["organ of organ"] = arr5;
+//temp["archive"] = get_iterator_organ()->get_project_of_organ();
+QJsonArray arr6;
+for (int i = 0; i < get_iterator_organ()->get_project_of_organ().size(); i++) {
+    arr6.push_back(get_iterator_organ()->get_project_of_organ()[i]);}
+temp["projects of organ"] = arr6;
+//temp["archive"] = get_iterator_organ()->get_teams_of_organ();
+QJsonArray arr7;
+for (int i = 0; i < get_iterator_organ()->get_teams_of_organ().size(); i++) {
+    arr7.push_back(get_iterator_organ()->get_teams_of_organ()[i]);}
+temp["teams of organ"] = arr7;
+
+//project header
+temp["head of project"] = get_iterator_pro()->get_head_of_project();
+temp["name of project"] = get_iterator_pro()->get_name_of_project();
+temp["situation"] = get_iterator_pro()->get_situation();
+//temp["archive"] = get_iterator_pro()->get_users_of_project();
+QJsonArray arr;
+for (int i = 0; i < get_iterator_pro()->get_users_of_project().size(); i++) {
+    arr.push_back(get_iterator_pro()->get_users_of_project()[i]);}
+temp["users of project"] = arr;
+//temp["archive"] = get_iterator_pro()->add_task_to_project();
+QJsonArray arr2;
+for (int i = 0; i < get_iterator_pro()->get_task_of_project().size(); i++) {
+    arr2.push_back(get_iterator_pro()->get_task_of_project()[i]);}
+temp["tasks of project"] = arr2;
+//temp["archive"] = get_iterator_pro()->get_team_of_project();
+QJsonArray arr3;
+for (int i = 0; i < get_iterator_pro()->get_team_of_project().size(); i++) {
+    arr3.push_back(get_iterator_pro()->get_team_of_project()[i]);}
+temp["teams of project"] = arr3;
+o[get_iterator_user()->get_username()] = temp;
+d.setObject(o);
+f.open(QIODevice::WriteOnly);
+f.write(d.toJson());
+f.close();
+
+}
 
 /*
     static void write_on_file() {

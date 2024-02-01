@@ -17,6 +17,9 @@ private:
     bool is_done = 0;
 
 public:
+    void add_team_to_project(QString s){teams_of_project.append(s);}
+    QVector<QString> get_team_of_project(){return teams_of_project;}
+    QVector<QString> get_task_of_project(){return task_of_project;}
     bool get_situation(){return is_done;}
     void set_situation(bool i){is_done = i;}
     project();

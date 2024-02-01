@@ -16,6 +16,7 @@ private:
     QVector<QString> organ_of_organ;
     QString head_of_organ;
 public:
+    void set_organ_of_organ(QString s){organ_of_organ.append(s);}
     organization();
     organization(QString creator_organ,QString _name_of_organ);
     void delete_project_from_organ(QString pro);
