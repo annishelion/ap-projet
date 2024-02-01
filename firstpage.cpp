@@ -112,7 +112,7 @@ void firstpage::on_project_group_clicked()
 
 void firstpage::on_actionexit_triggered()
 {
-    //Data::write_on_file();
+    Data::write_on_file();
     this->close();
 }
 

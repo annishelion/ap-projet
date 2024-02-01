@@ -17,20 +17,26 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>50</y>
+     <y>40</y>
      <width>351</width>
-     <height>181</height>
+     <height>191</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>260</y>
-     <width>75</width>
-     <height>24</height>
+     <x>20</x>
+     <y>243</y>
+     <width>351</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>sort</string>
@@ -39,14 +45,19 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>120</x>
      <y>10</y>
-     <width>131</width>
-     <height>16</height>
+     <width>201</width>
+     <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>sort by name</string>
+    <string>sort projects by name</string>
    </property>
   </widget>
  </widget>

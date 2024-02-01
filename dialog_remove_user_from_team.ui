@@ -16,21 +16,26 @@
   <widget class="QListWidget" name="list_my_teams_veiw">
    <property name="geometry">
     <rect>
-     <x>245</x>
+     <x>20</x>
      <y>40</y>
-     <width>141</width>
-     <height>192</height>
+     <width>251</width>
+     <height>61</height>
     </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>10</y>
+     <x>20</x>
+     <y>20</y>
      <width>63</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>my teams</string>
@@ -39,70 +44,62 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>240</y>
+     <x>290</x>
+     <y>40</y>
      <width>93</width>
-     <height>29</height>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>show</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>user </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>team</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="team_input">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>60</y>
-     <width>181</width>
-     <height>26</height>
+     <x>20</x>
+     <y>120</y>
+     <width>251</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Name of team</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="user_removed_input">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>181</width>
-     <height>26</height>
+     <x>20</x>
+     <y>170</y>
+     <width>251</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Username</string>
    </property>
   </widget>
   <widget class="QPushButton" name="remove_btn">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>160</y>
-     <width>93</width>
-     <height>29</height>
+     <x>20</x>
+     <y>220</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>remove</string>

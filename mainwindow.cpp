@@ -24,10 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
            QJsonObject o = d.object();
            QJsonObject temp;
        user p(" "," "," "," ");
-       team t(" ");
-       project pro(" ");
-       organization org(" " , " ");
-       task tas(" " , " ");
+
        QStringList sl = o.keys();
        for (int i = 0; i < sl.size(); i++) {
            temp = o[sl[i]].toObject();
@@ -36,62 +33,217 @@ MainWindow::MainWindow(QWidget *parent)
       p.set_username(temp["username"].toString());
       p.set_email(temp["email"].toString());
       p.set_password(temp["password"].toString());
-      //task header
-      tas.set_name_of_task(temp["Name of task"].toString());
-      tas.set_priority_for_task(temp["priority"].toString());
-      tas.set_project_Respons_the_task(temp["project respons"].toString());
-      tas.set_team_Respons_the_task(temp["team respons"].toString());
-      tas.set_user_Respons_the_task(temp["user respons"].toString());
-      tas.set_uesr_name_of_creator(temp["username creator"].toString());
-      tas.set_is_archive(temp["archive"].toInt());
-      //team header
-      t.set_head_of_team(temp["head of team"].toString());
-      t.set_name_of_team(temp["name of team"].toString());
-      QJsonArray arr = temp["users of team"].toArray();
-      for (int i = 0; i < arr.size(); i++)
-          t.add_member(arr[i].toString());
-      //organ header
-      org.set_head_of_organ(temp["head of organ"].toString());
-      org.set_name_of_organ(temp["name of organ"].toString());
-      QJsonArray arr2 = temp["users of organ"].toArray();
-      for (int i = 0; i < arr2.size(); i++)
-          org.add_member_to_organ(arr2[i].toString());
 
-      QJsonArray arr3 = temp["organ of organ"].toArray();
-      for (int i = 0; i < arr3.size(); i++)
-          org.set_organ_of_organ(arr3[i].toString());
-
-      QJsonArray arr4 = temp["projects of organ"].toArray();
-      for (int i = 0; i < arr4.size(); i++)
-          org.add_project_to_organ(arr4[i].toString());
-
-      QJsonArray arr5 = temp["teams of organ"].toArray();
-      for (int i = 0; i < arr5.size(); i++)
-          org.add_team_organ(arr5[i].toString());
-
-      //project header
-      pro.set_head_of_project(temp["head of project"].toString());
-      pro.set_name_of_project(temp["name of project"].toString());
-      pro.set_situation(temp["situation"].toInt());
-
-      QJsonArray arr6 = temp["users of project"].toArray();
-      for (int i = 0; i < arr6.size(); i++)
-          pro.add_member(arr6[i].toString());
-
-      QJsonArray arr7 = temp["tasks of project"].toArray();
-      for (int i = 0; i < arr7.size(); i++)
-          pro.add_task_to_project(arr7[i].toString());
-
-      QJsonArray arr8 = temp["teams of project"].toArray();
-      for (int i = 0; i < arr8.size(); i++)
-          pro.add_team_to_project(arr8[i].toString());
 
        Data::get_players().append(p);
+      }
+       }
+
+
+
+
+
+       QFile ff("Tasks.json");
+       ff.open(QIODevice::ReadOnly);
+       if (ff.isOpen() && Data::get_tasks().isEmpty()) {
+           QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
+           QJsonObject oo = dd.object();
+           QJsonObject temp2;
+            task tas(" " , " ");
+
+       QStringList sll = oo.keys();
+       for (int i = 0; i < sll.size(); i++) {
+           temp2 = oo[sll[i]].toObject();
+           //user header
+           tas.set_name_of_task(temp2["Name of task"].toString());
+           tas.set_priority_for_task(temp2["priority"].toString());
+           tas.set_project_Respons_the_task(temp2["project respons"].toString());
+           tas.set_team_Respons_the_task(temp2["team respons"].toString());
+           tas.set_user_Respons_the_task(temp2["user respons"].toString());
+           tas.set_uesr_name_of_creator(temp2["username creator"].toString());
+           tas.set_is_archive(temp2["archive"].toInt());
+
+       Data::get_tasks().append(tas);
+      }
+       }
+
+
+
+
+
+
+
+       QFile fff("Teams.json");
+       fff.open(QIODevice::ReadOnly);
+       if (fff.isOpen() && Data::get_teams().isEmpty()) {
+           QJsonDocument ddd = QJsonDocument::fromJson(fff.readAll());
+           QJsonObject ooo = ddd.object();
+           QJsonObject temp3;
+            team t(" ");
+
+       QStringList slll = ooo.keys();
+       for (int i = 0; i < slll.size(); i++) {
+           temp3 = ooo[slll[i]].toObject();
+           //user header
+           t.set_head_of_team(temp3["head of team"].toString());
+           t.set_name_of_team(temp3["name of team"].toString());
+           QJsonArray arr = temp3["users of team"].toArray();
+           for (int i = 0; i < arr.size(); i++)
+               t.add_member(arr[i].toString());
+
+       Data::get_teams().append(t);
+      }
+       }
+
+
+
+
+
+
+       QFile ffff("Organizations.json");
+       ffff.open(QIODevice::ReadOnly);
+       if (ffff.isOpen() && Data::get_organs().isEmpty()) {
+           QJsonDocument dddd = QJsonDocument::fromJson(ffff.readAll());
+           QJsonObject oooo = dddd.object();
+           QJsonObject temp4;
+            organization org(" " , " ");
+
+       QStringList sllll = oooo.keys();
+       for (int i = 0; i < sllll.size(); i++) {
+           temp4 = oooo[sllll[i]].toObject();
+           //user header
+           org.set_head_of_organ(temp4["head of organ"].toString());
+           org.set_name_of_organ(temp4["name of organ"].toString());
+           QJsonArray arr2 = temp4["users of organ"].toArray();
+           for (int i = 0; i < arr2.size(); i++)
+               org.add_member_to_organ(arr2[i].toString());
+
+           QJsonArray arr3 = temp4["organ of organ"].toArray();
+           for (int i = 0; i < arr3.size(); i++)
+               org.set_organ_of_organ(arr3[i].toString());
+
+           QJsonArray arr4 = temp4["projects of organ"].toArray();
+           for (int i = 0; i < arr4.size(); i++)
+               org.add_project_to_organ(arr4[i].toString());
+
+           QJsonArray arr5 = temp4["teams of organ"].toArray();
+           for (int i = 0; i < arr5.size(); i++)
+               org.add_team_organ(arr5[i].toString());
+
+       Data::get_organs().append(org);
+      }
+       }
+
+
+
+
+
+
+
+
+       QFile fffff("Projects.json");
+       fffff.open(QIODevice::ReadOnly);
+       if (fffff.isOpen() && Data::get_projects().isEmpty()) {
+           QJsonDocument ddddd = QJsonDocument::fromJson(fffff.readAll());
+           QJsonObject ooooo = ddddd.object();
+           QJsonObject temp5;
+           project pro(" ");
+
+       QStringList slllll = ooooo.keys();
+       for (int i = 0; i < slllll.size(); i++) {
+           temp5 = ooooo[slllll[i]].toObject();
+           //user header
+           pro.set_head_of_project(temp5["head of project"].toString());
+           pro.set_name_of_project(temp5["name of project"].toString());
+           pro.set_situation(temp5["situation"].toInt());
+
+           QJsonArray arr6 = temp5["users of project"].toArray();
+           for (int i = 0; i < arr6.size(); i++)
+               pro.add_member(arr6[i].toString());
+
+           QJsonArray arr7 = temp5["tasks of project"].toArray();
+           for (int i = 0; i < arr7.size(); i++)
+               pro.add_task_to_project(arr7[i].toString());
+
+           QJsonArray arr8 = temp5["teams of project"].toArray();
+           for (int i = 0; i < arr8.size(); i++)
+               pro.add_team_to_project(arr8[i].toString());
+
+       Data::get_projects().append(pro);
+      }
+       }
+
+
+
+
+
+
+
+
+
+
+       /*
+
+       team t(" ");
+       project pro(" ");
+       organization org(" " , " ");
+       task tas(" " , " ");
+       //task header
+       tas.set_name_of_task(temp["Name of task"].toString());
+       tas.set_priority_for_task(temp["priority"].toString());
+       tas.set_project_Respons_the_task(temp["project respons"].toString());
+       tas.set_team_Respons_the_task(temp["team respons"].toString());
+       tas.set_user_Respons_the_task(temp["user respons"].toString());
+       tas.set_uesr_name_of_creator(temp["username creator"].toString());
+       tas.set_is_archive(temp["archive"].toInt());
+       //team header
+       t.set_head_of_team(temp["head of team"].toString());
+       t.set_name_of_team(temp["name of team"].toString());
+       QJsonArray arr = temp["users of team"].toArray();
+       for (int i = 0; i < arr.size(); i++)
+           t.add_member(arr[i].toString());
+       //organ header
+       org.set_head_of_organ(temp["head of organ"].toString());
+       org.set_name_of_organ(temp["name of organ"].toString());
+       QJsonArray arr2 = temp["users of organ"].toArray();
+       for (int i = 0; i < arr2.size(); i++)
+           org.add_member_to_organ(arr2[i].toString());
+
+       QJsonArray arr3 = temp["organ of organ"].toArray();
+       for (int i = 0; i < arr3.size(); i++)
+           org.set_organ_of_organ(arr3[i].toString());
+
+       QJsonArray arr4 = temp["projects of organ"].toArray();
+       for (int i = 0; i < arr4.size(); i++)
+           org.add_project_to_organ(arr4[i].toString());
+
+       QJsonArray arr5 = temp["teams of organ"].toArray();
+       for (int i = 0; i < arr5.size(); i++)
+           org.add_team_organ(arr5[i].toString());
+
+       //project header
+       pro.set_head_of_project(temp["head of project"].toString());
+       pro.set_name_of_project(temp["name of project"].toString());
+       pro.set_situation(temp["situation"].toInt());
+
+       QJsonArray arr6 = temp["users of project"].toArray();
+       for (int i = 0; i < arr6.size(); i++)
+           pro.add_member(arr6[i].toString());
+
+       QJsonArray arr7 = temp["tasks of project"].toArray();
+       for (int i = 0; i < arr7.size(); i++)
+           pro.add_task_to_project(arr7[i].toString());
+
+       QJsonArray arr8 = temp["teams of project"].toArray();
+       for (int i = 0; i < arr8.size(); i++)
+           pro.add_team_to_project(arr8[i].toString());
+
+
        Data::get_organs().append(org);
        Data::get_tasks().append(tas);
        Data::get_projects().append(pro);
        Data::get_teams().append(t);
-       }
+       */
        /*
         *
         *
@@ -172,7 +324,7 @@ MainWindow::MainWindow(QWidget *parent)
                //Data::get_players().append(p);
 
 */
-}
+
 }
 
 MainWindow::~MainWindow()

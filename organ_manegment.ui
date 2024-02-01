@@ -33,6 +33,11 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
      <string>my organization</string>
     </property>
@@ -46,6 +51,12 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="text">
      <string>show</string>
     </property>
@@ -58,6 +69,11 @@
       <width>221</width>
       <height>421</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="title">
      <string>GroupBox</string>
@@ -110,6 +126,11 @@
       <width>221</width>
       <height>421</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="title">
      <string>GroupBox</string>
@@ -174,7 +195,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

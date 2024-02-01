@@ -16,10 +16,10 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>225</x>
-     <y>10</y>
-     <width>161</width>
-     <height>201</height>
+     <x>10</x>
+     <y>30</y>
+     <width>251</width>
+     <height>61</height>
     </rect>
    </property>
   </widget>
@@ -39,11 +39,17 @@
   <widget class="QPushButton" name="show">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>240</y>
+     <x>280</x>
+     <y>30</y>
      <width>75</width>
-     <height>24</height>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>show</string>
@@ -52,11 +58,16 @@
   <widget class="QPushButton" name="remove">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>10</x>
      <y>230</y>
-     <width>75</width>
-     <height>24</height>
+     <width>251</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>REMOVE</string>
@@ -65,47 +76,45 @@
   <widget class="QLineEdit" name="enter_username">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>150</y>
-     <width>151</width>
-     <height>22</height>
+     <x>10</x>
+     <y>170</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Username</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="enter_project">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>80</y>
-     <width>151</width>
-     <height>22</height>
+     <x>10</x>
+     <y>110</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Name of project</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
+     <x>20</x>
+     <y>10</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
-   <property name="text">
-    <string>enter project</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>130</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
-    <string>enter username</string>
+    <string>my project</string>
    </property>
   </widget>
  </widget>

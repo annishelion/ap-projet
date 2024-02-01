@@ -80,161 +80,207 @@ static void write_on_file() {
 temp["username"] = get_iterator_user()->get_username();
 temp["email"] = get_iterator_user()->get_email();
 temp["password"] = get_iterator_user()->get_password();
-
-//task header
-temp["Name of task"] = get_iterator_task()->get_name_of_task();
-temp["priority"] = get_iterator_task()->get_priority_for_task();
-temp["project respons"] = get_iterator_task()->get_project_Respons_the_task();
-temp["team respons"] = get_iterator_task()->get_team_Respons_the_task();
-temp["user respons"] = get_iterator_task()->get_user_Respons_the_task();
-temp["username creator"] = get_iterator_task()->get_username_of_cteator();
-temp["archive"] = get_iterator_task()->get_is_archive();
-
-//team header
-temp["head of team"] = get_iterator_team()->get_head_of_team();
-temp["name of team"] = get_iterator_team()->get_name_of_team();
-//temp["archive"] = get_iterator_team()->get_members_of_team();
-QJsonArray arr8;
-for (int i = 0; i < get_iterator_team()->get_members_of_team().size(); i++) {
-    arr8.push_back(get_iterator_team()->get_members_of_team()[i]);}
-temp["users of team"] = arr8;
-
-//organization header
-temp["head of organ"] = get_iterator_organ()->get_head_of_organ();
-temp["name of organ"] = get_iterator_organ()->get_name_of_organ();
-//temp["archive"] = get_iterator_organ()->get_member_of_organ();
-QJsonArray arr4;
-for (int i = 0; i < get_iterator_organ()->get_member_of_organ().size(); i++) {
-    arr4.push_back(get_iterator_organ()->get_member_of_organ()[i]);}
-temp["users of organ"] = arr4;
-//temp["archive"] = get_iterator_organ()->get_organ_of_organ();
-QJsonArray arr5;
-for (int i = 0; i < get_iterator_organ()->get_organ_of_organ().size(); i++) {
-    arr5.push_back(get_iterator_organ()->get_organ_of_organ()[i]);}
-temp["organ of organ"] = arr5;
-//temp["archive"] = get_iterator_organ()->get_project_of_organ();
-QJsonArray arr6;
-for (int i = 0; i < get_iterator_organ()->get_project_of_organ().size(); i++) {
-    arr6.push_back(get_iterator_organ()->get_project_of_organ()[i]);}
-temp["projects of organ"] = arr6;
-//temp["archive"] = get_iterator_organ()->get_teams_of_organ();
-QJsonArray arr7;
-for (int i = 0; i < get_iterator_organ()->get_teams_of_organ().size(); i++) {
-    arr7.push_back(get_iterator_organ()->get_teams_of_organ()[i]);}
-temp["teams of organ"] = arr7;
-
-//project header
-temp["head of project"] = get_iterator_pro()->get_head_of_project();
-temp["name of project"] = get_iterator_pro()->get_name_of_project();
-temp["situation"] = get_iterator_pro()->get_situation();
-//temp["archive"] = get_iterator_pro()->get_users_of_project();
-QJsonArray arr;
-for (int i = 0; i < get_iterator_pro()->get_users_of_project().size(); i++) {
-    arr.push_back(get_iterator_pro()->get_users_of_project()[i]);}
-temp["users of project"] = arr;
-//temp["archive"] = get_iterator_pro()->add_task_to_project();
-QJsonArray arr2;
-for (int i = 0; i < get_iterator_pro()->get_task_of_project().size(); i++) {
-    arr2.push_back(get_iterator_pro()->get_task_of_project()[i]);}
-temp["tasks of project"] = arr2;
-//temp["archive"] = get_iterator_pro()->get_team_of_project();
-QJsonArray arr3;
-for (int i = 0; i < get_iterator_pro()->get_team_of_project().size(); i++) {
-    arr3.push_back(get_iterator_pro()->get_team_of_project()[i]);}
-temp["teams of project"] = arr3;
 o[get_iterator_user()->get_username()] = temp;
 d.setObject(o);
 f.open(QIODevice::WriteOnly);
 f.write(d.toJson());
 f.close();
 
+
+QFile ff("Tasks.json");
+ff.open(QIODevice::ReadOnly);
+QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
+ff.close();
+QJsonObject oo = dd.object();
+QJsonObject temp2 = oo[get_iterator_task()->get_name_of_task()].toObject();
+//user header
+temp2["Name of task"] = get_iterator_task()->get_name_of_task();
+temp2["priority"] = get_iterator_task()->get_priority_for_task();
+temp2["project respons"] = get_iterator_task()->get_project_Respons_the_task();
+temp2["team respons"] = get_iterator_task()->get_team_Respons_the_task();
+temp2["user respons"] = get_iterator_task()->get_user_Respons_the_task();
+temp2["username creator"] = get_iterator_task()->get_username_of_cteator();
+temp2["archive"] = get_iterator_task()->get_is_archive();
+oo[get_iterator_task()->get_name_of_task()] = temp2;
+dd.setObject(oo);
+ff.open(QIODevice::WriteOnly);
+ff.write(dd.toJson());
+ff.close();
+
+
+QFile fff("Teams.json");
+fff.open(QIODevice::ReadOnly);
+QJsonDocument ddd = QJsonDocument::fromJson(fff.readAll());
+fff.close();
+QJsonObject ooo = ddd.object();
+QJsonObject temp3 = ooo[get_iterator_team()->get_name_of_team()].toObject();
+//user header
+temp3["head of team"] = get_iterator_team()->get_head_of_team();
+temp3["name of team"] = get_iterator_team()->get_name_of_team();
+//temp["archive"] = get_iterator_team()->get_members_of_team();
+QJsonArray arr8;
+for (int i = 0; i < get_iterator_team()->get_members_of_team().size(); i++) {
+    arr8.push_back(get_iterator_team()->get_members_of_team()[i]);}
+temp3["users of team"] = arr8;
+ooo[get_iterator_team()->get_name_of_team()] = temp3;
+ddd.setObject(ooo);
+fff.open(QIODevice::WriteOnly);
+fff.write(ddd.toJson());
+fff.close();
+
+
+
+QFile ffff("Organizations.json");
+ffff.open(QIODevice::ReadOnly);
+QJsonDocument dddd = QJsonDocument::fromJson(ffff.readAll());
+ffff.close();
+QJsonObject oooo = dddd.object();
+QJsonObject temp4 = oooo[get_iterator_organ()->get_name_of_organ()].toObject();
+//user header
+temp4["head of organ"] = get_iterator_organ()->get_head_of_organ();
+temp4["name of organ"] = get_iterator_organ()->get_name_of_organ();
+//temp["archive"] = get_iterator_organ()->get_member_of_organ();
+QJsonArray arr4;
+for (int i = 0; i < get_iterator_organ()->get_member_of_organ().size(); i++) {
+    arr4.push_back(get_iterator_organ()->get_member_of_organ()[i]);}
+temp4["users of organ"] = arr4;
+//temp["archive"] = get_iterator_organ()->get_organ_of_organ();
+QJsonArray arr5;
+for (int i = 0; i < get_iterator_organ()->get_organ_of_organ().size(); i++) {
+    arr5.push_back(get_iterator_organ()->get_organ_of_organ()[i]);}
+temp4["organ of organ"] = arr5;
+//temp["archive"] = get_iterator_organ()->get_project_of_organ();
+QJsonArray arr6;
+for (int i = 0; i < get_iterator_organ()->get_project_of_organ().size(); i++) {
+    arr6.push_back(get_iterator_organ()->get_project_of_organ()[i]);}
+temp4["projects of organ"] = arr6;
+//temp["archive"] = get_iterator_organ()->get_teams_of_organ();
+QJsonArray arr7;
+for (int i = 0; i < get_iterator_organ()->get_teams_of_organ().size(); i++) {
+    arr7.push_back(get_iterator_organ()->get_teams_of_organ()[i]);}
+temp4["teams of organ"] = arr7;
+oooo[get_iterator_organ()->get_name_of_organ()] = temp4;
+dddd.setObject(oooo);
+ffff.open(QIODevice::WriteOnly);
+ffff.write(dddd.toJson());
+ffff.close();
+
+
+
+
+
+QFile fffff("Projects.json");
+fffff.open(QIODevice::ReadOnly);
+QJsonDocument ddddd = QJsonDocument::fromJson(fffff.readAll());
+fffff.close();
+QJsonObject ooooo = ddddd.object();
+QJsonObject temp5 = ooooo[get_iterator_pro()->get_name_of_project()].toObject();
+
+//project header
+temp5["head of project"] = get_iterator_pro()->get_head_of_project();
+temp5["name of project"] = get_iterator_pro()->get_name_of_project();
+temp5["situation"] = get_iterator_pro()->get_situation();
+//temp["archive"] = get_iterator_pro()->get_users_of_project();
+QJsonArray arr;
+for (int i = 0; i < get_iterator_pro()->get_users_of_project().size(); i++) {
+    arr.push_back(get_iterator_pro()->get_users_of_project()[i]);}
+temp5["users of project"] = arr;
+//temp["archive"] = get_iterator_pro()->add_task_to_project();
+QJsonArray arr2;
+for (int i = 0; i < get_iterator_pro()->get_task_of_project().size(); i++) {
+    arr2.push_back(get_iterator_pro()->get_task_of_project()[i]);}
+temp5["tasks of project"] = arr2;
+//temp["archive"] = get_iterator_pro()->get_team_of_project();
+QJsonArray arr3;
+for (int i = 0; i < get_iterator_pro()->get_team_of_project().size(); i++) {
+    arr3.push_back(get_iterator_pro()->get_team_of_project()[i]);}
+temp5["teams of project"] = arr3;
+ooooo[get_iterator_pro()->get_name_of_project()] = temp5;
+ddddd.setObject(ooooo);
+fffff.open(QIODevice::WriteOnly);
+fffff.write(ddddd.toJson());
+fffff.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+//task header
+//temp["Name of task"] = get_iterator_task()->get_name_of_task();
+//temp["priority"] = get_iterator_task()->get_priority_for_task();
+//temp["project respons"] = get_iterator_task()->get_project_Respons_the_task();
+//temp["team respons"] = get_iterator_task()->get_team_Respons_the_task();
+//temp["user respons"] = get_iterator_task()->get_user_Respons_the_task();
+//temp["username creator"] = get_iterator_task()->get_username_of_cteator();
+//temp["archive"] = get_iterator_task()->get_is_archive();
+
+//team header
+//temp["head of team"] = get_iterator_team()->get_head_of_team();
+//temp["name of team"] = get_iterator_team()->get_name_of_team();
+//temp["archive"] = get_iterator_team()->get_members_of_team();
+//QJsonArray arr8;
+//for (int i = 0; i < get_iterator_team()->get_members_of_team().size(); i++) {
+//    arr8.push_back(get_iterator_team()->get_members_of_team()[i]);}
+//temp["users of team"] = arr8;
+
+//organization header
+//temp["head of organ"] = get_iterator_organ()->get_head_of_organ();
+//temp["name of organ"] = get_iterator_organ()->get_name_of_organ();
+//temp["archive"] = get_iterator_organ()->get_member_of_organ();
+//QJsonArray arr4;
+//for (int i = 0; i < get_iterator_organ()->get_member_of_organ().size(); i++) {
+ //   arr4.push_back(get_iterator_organ()->get_member_of_organ()[i]);}
+//temp["users of organ"] = arr4;
+//temp["archive"] = get_iterator_organ()->get_organ_of_organ();
+//QJsonArray arr5;
+//for (int i = 0; i < get_iterator_organ()->get_organ_of_organ().size(); i++) {
+ //   arr5.push_back(get_iterator_organ()->get_organ_of_organ()[i]);}
+//temp["organ of organ"] = arr5;
+//temp["archive"] = get_iterator_organ()->get_project_of_organ();
+//QJsonArray arr6;
+//for (int i = 0; i < get_iterator_organ()->get_project_of_organ().size(); i++) {
+  //  arr6.push_back(get_iterator_organ()->get_project_of_organ()[i]);}
+//temp["projects of organ"] = arr6;
+//temp["archive"] = get_iterator_organ()->get_teams_of_organ();
+//QJsonArray arr7;
+//for (int i = 0; i < get_iterator_organ()->get_teams_of_organ().size(); i++) {
+  //  arr7.push_back(get_iterator_organ()->get_teams_of_organ()[i]);}
+//temp["teams of organ"] = arr7;
+
+//project header
+//temp["head of project"] = get_iterator_pro()->get_head_of_project();
+//temp["name of project"] = get_iterator_pro()->get_name_of_project();
+//temp["situation"] = get_iterator_pro()->get_situation();
+//temp["archive"] = get_iterator_pro()->get_users_of_project();
+//QJsonArray arr;
+//for (int i = 0; i < get_iterator_pro()->get_users_of_project().size(); i++) {
+  //  arr.push_back(get_iterator_pro()->get_users_of_project()[i]);}
+//temp["users of project"] = arr;
+//temp["archive"] = get_iterator_pro()->add_task_to_project();
+//QJsonArray arr2;
+//f/or (int i = 0; i < get_iterator_pro()->get_task_of_project().size(); i++) {
+ //   arr2.push_back(get_iterator_pro()->get_task_of_project()[i]);}
+//temp["tasks of project"] = arr2;
+//temp["archive"] = get_iterator_pro()->get_team_of_project();
+//QJsonArray arr3;
+//for (int i = 0; i < get_iterator_pro()->get_team_of_project().size(); i++) {
+  //  arr3.push_back(get_iterator_pro()->get_team_of_project()[i]);}
+//temp["teams of project"] = arr3;
+//o[get_iterator_user()->get_username()] = temp;
+//d.setObject(o);
+//f.open(QIODevice::WriteOnly);
+//f.write(d.toJson());
+//f.close();
+
 }
-
-/*
-    static void write_on_file() {
-        QFile f("Players.json");
-        f.open(QIODevice::ReadOnly);
-        QJsonDocument d = QJsonDocument::fromJson(f.readAll());
-        f.close();
-        QJsonObject o = d.object();
-        QJsonObject temp = o[get_iterator()->get_username()].toObject();
-        temp["Name"] = get_iterator()->get_name();
-        temp["Username"] = get_iterator()->get_username();
-        temp["Password"] = get_iterator()->get_password();
-        temp["Email"] = get_iterator()->get_email();
-        temp["Coin"] = get_iterator()->get_coin();
-        temp["Level"] = get_iterator()->get_level();
-        temp["Experience"] = get_iterator()->get_experience();
-        temp["Experience required for levelUp"] = get_iterator()->get_experience_required_for_levelUp();
-        temp["SignUp time"] = get_iterator()->get_farm().Get_MyThread().Get_time_login();
-        temp["last_time_set"] = get_iterator()->get_farm().Get_MyThread().Get_last_time_set();
-        temp["upgrade_Storage time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Storage();
-        temp["upgrade_Siloo time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Siloo();
-        QJsonArray arr;
-        for (int i = 0; i < get_iterator()->get_farm().Get_MyThread().Get_Buy_Milk().size(); i++) {
-            arr.push_back(get_iterator()->get_farm().Get_MyThread().Get_Buy_Milk()[i]);
-        }
-        temp["buy_Milk time"] = arr;
-        temp["ChickenHome is build"] = get_iterator()->get_farm().get_chickenHome().get_is_build();
-        temp["CowHome is build"] = get_iterator()->get_farm().get_cowHome().get_is_build();
-        temp["SheepHome is build"] = get_iterator()->get_farm().get_sheepHome().get_is_build();
-        temp["YonjehFarm is build"] = get_iterator()->get_farm().get_yonjeFarm().get_is_build();
-        temp["YonjehFarm is plantable"] = get_iterator()->get_farm().get_yonjeFarm().get_is_plantable();
-        temp["upgrade_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_ChickenHome();
-        temp["build_ChickenHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_ChickenHome();
-        temp["feed_time_chicken"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_chicken();
-        temp["upgrade_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_CowHome();
-        temp["build_CowHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_CowHome();
-        temp["feed_time_cow"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_cow();
-        temp["upgrade_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_SheepHome();
-        temp["build_SheepHome time"] = get_iterator()->get_farm().Get_MyThread().Get_build_SheepHome();
-        temp["feed_time_sheep"] = get_iterator()->get_farm().Get_MyThread().Get_feed_time_sheep();
-        temp["upgrade_Gandomfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Gandomfarm();
-        temp["Collect_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_GandomFarm();
-        temp["Planting_from_GandomFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_Gandomfarm();
-        temp["Planting_from_YonjeFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_planting_YonjeFarm();
-        temp["upgrade_Yonjehfarm time"] = get_iterator()->get_farm().Get_MyThread().Get_upgrade_Yonjehfarm();
-        temp["Collect_from_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Collect_from_YonjehFarm();
-        temp["Build_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Build_YonjehFarm();
-        temp["Plow_YonjehFarm time"] = get_iterator()->get_farm().Get_MyThread().Get_Plow_YonjehFarm();
-        temp["Mikh number"] = get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
-
-        qDebug() << "AAA" << get_iterator()->get_farm().get_storage().Get_mikh().Get_Number();
-
-
-        temp["Bill number"] = get_iterator()->get_farm().get_storage().Get_bill().Get_Number();
-        temp["Yonjeh number"] = get_iterator()->get_farm().get_storage().Get_yonjeh().Get_Number();
-        temp["Egg number"] = get_iterator()->get_farm().get_storage().Get_egg().Get_Number();
-        temp["Milk number"] = get_iterator()->get_farm().get_storage().Get_milk().Get_Number();
-        temp["Pashm number"] = get_iterator()->get_farm().get_storage().Get_pashm().Get_Number();
-        temp["Storage capacity"] = get_iterator()->get_farm().get_storage().GetCapasity();
-        temp["Storage level"] = get_iterator()->get_farm().get_storage().Get_Buliding_Level();
-        temp["Storage occupied capacity"] = get_iterator()->get_farm().get_storage().Get_Occupied_Capacity();
-        temp["Gandom number"] = get_iterator()->get_farm().get_siloo().Get_gandom().Get_Number();
-        temp["Siloo capacity"] = get_iterator()->get_farm().get_siloo().GetCapasity();
-        temp["Siloo level"] = get_iterator()->get_farm().get_siloo().Get_Buliding_Level();
-        temp["Siloo occupied capacity"] = get_iterator()->get_farm().get_siloo().Get_Occupied_Capacity();
-        temp["ChickenHome capacity"] = get_iterator()->get_farm().get_chickenHome().get_capacity();
-        temp["ChickenHome level"] = get_iterator()->get_farm().get_chickenHome().get_level_habitat();
-        temp["ChickenHome stock"] = get_iterator()->get_farm().get_chickenHome().get_stock_animal();
-        temp["CowHome capacity"] = get_iterator()->get_farm().get_cowHome().get_capacity();
-        temp["CowHome level"] = get_iterator()->get_farm().get_cowHome().get_level_habitat();
-        temp["CowHome stock"] = get_iterator()->get_farm().get_cowHome().get_stock_animal();
-        temp["SheepHome capacity"] = get_iterator()->get_farm().get_sheepHome().get_capacity();
-        temp["SheepHome level"] = get_iterator()->get_farm().get_sheepHome().get_level_habitat();
-        temp["SheepHome stock"] = get_iterator()->get_farm().get_sheepHome().get_stock_animal();
-        temp["GandomFarm area"] = get_iterator()->get_farm().get_gandomFarm().getarea();
-        temp["GandomFarm level"] = get_iterator()->get_farm().get_gandomFarm().get_level();
-        temp["YonjehFarm area"] = get_iterator()->get_farm().get_yonjeFarm().getarea();
-        temp["YonjehFarm level"] = get_iterator()->get_farm().get_yonjeFarm().get_level();
-        o[get_iterator()->get_username()] = temp;
-        d.setObject(o);
-        f.open(QIODevice::WriteOnly);
-        f.write(d.toJson());
-        f.close();
-
-   }
-   */
 };
 
 #endif // DATA_H

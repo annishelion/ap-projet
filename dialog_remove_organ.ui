@@ -16,10 +16,10 @@
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>10</y>
-     <width>181</width>
-     <height>201</height>
+     <x>20</x>
+     <y>30</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
   </widget>
@@ -27,33 +27,46 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>90</y>
-     <width>171</width>
+     <y>120</y>
+     <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Name of organ</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>60</y>
+     <x>20</x>
+     <y>10</y>
      <width>81</width>
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>entre the organ</string>
+    <string>my organs</string>
    </property>
   </widget>
   <widget class="QPushButton" name="ok">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>20</x>
      <y>170</y>
-     <width>75</width>
-     <height>24</height>
+     <width>241</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>OK</string>
@@ -62,11 +75,17 @@
   <widget class="QPushButton" name="show">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>240</y>
+     <x>290</x>
+     <y>30</y>
      <width>75</width>
-     <height>24</height>
+     <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>show</string>
