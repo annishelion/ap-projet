@@ -32,7 +32,7 @@ void Dialog_edit_project::on_buttonBox_accepted()
 {
     if(ui->input_head_of_project->text().isEmpty() || ui->input_new_name->text().isEmpty() || ui->input_old_name->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
         return;
     }
 

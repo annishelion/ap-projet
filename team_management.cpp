@@ -10,6 +10,7 @@
 #include "dialog_edit_team.h"
 #include "dialog_remove_user_from_team.h"
 #include "dialog_show_teams_of_organ.h"
+#include "dialog_sort_team.h"
 team_management::team_management(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::team_management)
@@ -85,5 +86,12 @@ void team_management::on_add_user_to_organ_btn_clicked()
 {
     Dialog_team_to_organ *ee = new Dialog_team_to_organ();
     ee->show();
+}
+
+
+void team_management::on_filter_teams_btn_clicked()
+{
+    Dialog_sort_team *s = new Dialog_sort_team();
+    s->show();
 }
 

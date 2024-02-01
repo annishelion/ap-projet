@@ -29,7 +29,7 @@ void Dialog_add_project_to_organ::on_buttonBox_accepted()
 {
     if(ui->input_organ->text().isEmpty() || ui->input_project->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " Please fill the items!");
         return;
     }
     int flag =0 ;
@@ -38,7 +38,7 @@ void Dialog_add_project_to_organ::on_buttonBox_accepted()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " پروزه ای بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No project with this name was found!");
         return;
 
     }
@@ -49,7 +49,7 @@ void Dialog_add_project_to_organ::on_buttonBox_accepted()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " سازمانی با این نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
     }

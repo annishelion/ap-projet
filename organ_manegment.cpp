@@ -7,6 +7,7 @@
 #include "dialog_remove_user_from_organ.h"
 #include "dialog_add_user_to_organ.h"
 #include "dialog_view_added_organ_to_organ.h"
+#include "dialog_sort_organs.h"
 organ_manegment::organ_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::organ_manegment)
@@ -71,5 +72,12 @@ void organ_manegment::on_pushButton_6_clicked()
 {
     Dialog_view_added_organ_to_organ *aa = new Dialog_view_added_organ_to_organ();
     aa->show();
+}
+
+
+void organ_manegment::on_pushButton_7_clicked()
+{
+    Dialog_sort_organs *s = new Dialog_sort_organs();
+    s->show();
 }
 

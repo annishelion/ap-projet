@@ -34,6 +34,8 @@ private slots:
 
     void on_project_group_clicked();
 
+    void on_actionexit_triggered();
+
 private:
     Ui::firstpage *ui;
 };

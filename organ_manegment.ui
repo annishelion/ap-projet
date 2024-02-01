@@ -163,7 +163,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>filter and sort</string>
+      <string> sort</string>
      </property>
     </widget>
    </widget>
@@ -174,7 +174,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

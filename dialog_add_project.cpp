@@ -18,14 +18,14 @@ void Dialog_add_project::on_buttonBox_accepted()
 {
     if( ui->input_name_of_project->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " Please fill the items!");
     return;
     }
 
     for(int i =0 ; Data::get_organs().size() > i ; i++){
         if(Data::get_organs()[i].get_name_of_organ() == ui->input_name_of_project->text())
         {
-            QMessageBox::warning(this, "تذکر", "اسم پروزه تکراری است!");
+            QMessageBox::warning(this, "error!", "The name of the project is repeated!");
             return;
         }
 

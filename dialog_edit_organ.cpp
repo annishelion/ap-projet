@@ -31,7 +31,7 @@ void Dialog_edit_organ::on_edit_organ_clicked()
 {
     if(ui->new_head->text().isEmpty() || ui->new_name->text().isEmpty() || ui->old_name->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
         return;
     }
 

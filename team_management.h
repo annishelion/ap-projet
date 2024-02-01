@@ -32,6 +32,8 @@ private slots:
 
     void on_add_user_to_organ_btn_clicked();
 
+    void on_filter_teams_btn_clicked();
+
 private:
     Ui::team_management *ui;
 };

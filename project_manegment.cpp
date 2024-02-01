@@ -8,6 +8,7 @@
 #include "data.h"
 #include "dialog_delete_project.h"
 #include "dialog_show_oroject_of_organ.h"
+#include "dialog_sort_project.h"
 project_manegment::project_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::project_manegment)
@@ -80,5 +81,12 @@ void project_manegment::on_pushButton_7_clicked()
 {
     Dialog_show_oroject_of_organ *g = new Dialog_show_oroject_of_organ();
     g->show();
+}
+
+
+void project_manegment::on_pushButton_8_clicked()
+{
+    Dialog_sort_project *s = new Dialog_sort_project();
+    s->show();
 }
 

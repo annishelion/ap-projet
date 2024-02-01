@@ -18,7 +18,7 @@ void dialog_edit_task::on_buttonBox_accepted()
 {
     if(ui->old_name_of_task_input->text().isEmpty() || ui->new_name_of_task_input->text().isEmpty() || ui->new_priority_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+      QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
 

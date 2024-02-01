@@ -30,7 +30,7 @@ void Dialog_view_added_organ_to_organ::on_show_organ_of_organ_btn_clicked()
 
     if(ui->organ_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+      QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
 

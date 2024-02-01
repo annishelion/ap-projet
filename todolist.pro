@@ -34,6 +34,9 @@ SOURCES += \
     dialog_show_oroject_of_organ.cpp \
     dialog_show_teams_of_organ.cpp \
     dialog_signup.cpp \
+    dialog_sort_organs.cpp \
+    dialog_sort_project.cpp \
+    dialog_sort_team.cpp \
     dialog_team_to_organ.cpp \
     dialog_view_added_organ_to_organ.cpp \
     firstpage.cpp \
@@ -76,6 +79,9 @@ HEADERS += \
     dialog_show_oroject_of_organ.h \
     dialog_show_teams_of_organ.h \
     dialog_signup.h \
+    dialog_sort_organs.h \
+    dialog_sort_project.h \
+    dialog_sort_team.h \
     dialog_team_to_organ.h \
     dialog_view_added_organ_to_organ.h \
     firstpage.h \
@@ -116,6 +122,9 @@ FORMS += \
     dialog_show_oroject_of_organ.ui \
     dialog_show_teams_of_organ.ui \
     dialog_signup.ui \
+    dialog_sort_organs.ui \
+    dialog_sort_project.ui \
+    dialog_sort_team.ui \
     dialog_team_to_organ.ui \
     dialog_view_added_organ_to_organ.ui \
     firstpage.ui \
@@ -129,3 +138,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resoures.qrc

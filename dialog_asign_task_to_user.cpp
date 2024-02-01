@@ -31,7 +31,7 @@ void Dialog_asign_task_to_user::on_assign_btn_clicked()
 {
     if(ui->user_input_->text().isEmpty() || ui->task_to_assign_input->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
         return;
     }
 
@@ -42,7 +42,7 @@ void Dialog_asign_task_to_user::on_assign_btn_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No person found with this name!");
         return;
 
     }
@@ -54,7 +54,7 @@ void Dialog_asign_task_to_user::on_assign_btn_clicked()
             flag4 = 1;
     }
     if(flag4 == 0 ){
-        QMessageBox::warning(this, "تذکر", " وظیفه ای با این نام یاقت نشد!");
+        QMessageBox::warning(this, "error!", " There was no task with this name!");
         return;
 
 

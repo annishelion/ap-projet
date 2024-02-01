@@ -32,7 +32,7 @@ void Dialog_delete_project::on_buttonBox_accepted()
 {
     if( ui->input_name_of_project->text().isEmpty())
     {
-        QMessageBox::warning(this, "تذکر", " فیلد باید پر شود!");
+        QMessageBox::warning(this, "error!", " please fill the items!");
     return;
     }
 
