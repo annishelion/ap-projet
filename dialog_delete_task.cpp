@@ -38,7 +38,7 @@ void Dialog_delete_task::on_buttonBox_accepted()
         if (Data::get_onlineId() == Data::get_tasks()[i].get_username_of_cteator()) {
             if(Data::get_tasks()[i].get_name_of_task() == ui->delete_task_btn->text())
             {
-             Data::get_tasks().erase(Data::get_tasks().begin()+i);
+             Data::get_tasks().erase(Data::get_tasks().cbegin()+i);
 
             }
 

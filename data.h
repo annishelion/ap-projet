@@ -67,17 +67,17 @@ static QVector<task>& get_tasks() { return tasks ; }
 
 static QString& get_onlineId() { return onlineId ; }
 static void set_onlineId(QString _onl){ onlineId=_onl; }
-    /*
-public:
-    static void set_iterator(QVector<Player>::iterator _it){ it=_it; }
+ //
+//static void write_on_file() {
+  //  QFile f("Players.json");
+    //f.open(QIODevice::ReadOnly);
+    //QJsonDocument d = QJsonDocument::fromJson(f.readAll());
+    //f.close();
+    //QJsonObject o = d.object();
+    //QJsonObject temp = o[get_iterator_user()->get_username()].toObject();
+//temp["Name"] = get_iterator_user()->get_Name();
 
-    static QVector<Player>::iterator& get_iterator(){ return it; }
-
-    static void set_players(QVector<Player>& _players){ players=_players; }
-
-    static QVector<Player>& get_players() { return players; }
-
-
+/*
     static void write_on_file() {
         QFile f("Players.json");
         f.open(QIODevice::ReadOnly);

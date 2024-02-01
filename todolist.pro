@@ -20,15 +20,18 @@ SOURCES += \
     dialog_assign_task_to_project.cpp \
     dialog_assign_task_to_team.cpp \
     dialog_create_team.cpp \
+    dialog_delete_project.cpp \
     dialog_delete_task.cpp \
     dialog_delete_team.cpp \
     dialog_edit_organ.cpp \
+    dialog_edit_project.cpp \
     dialog_edit_task.cpp \
     dialog_edit_team.cpp \
     dialog_remove_organ.cpp \
     dialog_remove_user_from_organ.cpp \
     dialog_remove_user_from_project.cpp \
     dialog_remove_user_from_team.cpp \
+    dialog_show_oroject_of_organ.cpp \
     dialog_show_teams_of_organ.cpp \
     dialog_signup.cpp \
     dialog_team_to_organ.cpp \
@@ -59,15 +62,18 @@ HEADERS += \
     dialog_assign_task_to_project.h \
     dialog_assign_task_to_team.h \
     dialog_create_team.h \
+    dialog_delete_project.h \
     dialog_delete_task.h \
     dialog_delete_team.h \
     dialog_edit_organ.h \
+    dialog_edit_project.h \
     dialog_edit_task.h \
     dialog_edit_team.h \
     dialog_remove_organ.h \
     dialog_remove_user_from_organ.h \
     dialog_remove_user_from_project.h \
     dialog_remove_user_from_team.h \
+    dialog_show_oroject_of_organ.h \
     dialog_show_teams_of_organ.h \
     dialog_signup.h \
     dialog_team_to_organ.h \
@@ -96,15 +102,18 @@ FORMS += \
     dialog_assign_task_to_project.ui \
     dialog_assign_task_to_team.ui \
     dialog_create_team.ui \
+    dialog_delete_project.ui \
     dialog_delete_task.ui \
     dialog_delete_team.ui \
     dialog_edit_organ.ui \
+    dialog_edit_project.ui \
     dialog_edit_task.ui \
     dialog_edit_team.ui \
     dialog_remove_organ.ui \
     dialog_remove_user_from_organ.ui \
     dialog_remove_user_from_project.ui \
     dialog_remove_user_from_team.ui \
+    dialog_show_oroject_of_organ.ui \
     dialog_show_teams_of_organ.ui \
     dialog_signup.ui \
     dialog_team_to_organ.ui \
