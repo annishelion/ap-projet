@@ -41,7 +41,7 @@ void Dialog_team_to_organ::on_buttonBox_accepted()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " تیمی بااین نام یافت نشد!");
+      QMessageBox::warning(this, "error!", " No team found with this name!");
         return;
 
     }
@@ -52,7 +52,7 @@ void Dialog_team_to_organ::on_buttonBox_accepted()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " سازمانی با این نام یافت نشد!");
+    QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
     }
@@ -66,7 +66,7 @@ void Dialog_team_to_organ::on_buttonBox_accepted()
         if(Data::get_organs()[i].get_head_of_organ() == Data::get_onlineId() && Data::get_organs()[i].get_name_of_organ() == ui->organ_input->text()){
             for(int a =0 ; Data::get_organs()[i].get_teams_of_organ().size() > a ; a++){
                 if(Data::get_organs()[i].get_teams_of_organ()[a] == ui->team_input->text()){
-                    QMessageBox::warning(this, "تذکر", " این تیم در این سازمان عضو است!");
+                    QMessageBox::warning(this, "error", " This team is a member of this organization!");
                     return;
                 }
             }

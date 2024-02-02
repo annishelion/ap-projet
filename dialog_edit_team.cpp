@@ -44,7 +44,7 @@ void Dialog_edit_team::on_edit_btn_clicked()
                    flag2 = 1;
     }
        if(flag2 == 0 ){
-           QMessageBox::warning(this, "تذکر", " تیمی با این نام یافت نشد!");
+           QMessageBox::warning(this, "error!", " No team found with this name!");
            return;
 
        }
@@ -56,7 +56,7 @@ void Dialog_edit_team::on_edit_btn_clicked()
                       flag3 = 1;
        }
           if(flag3 == 0 ){
-              QMessageBox::warning(this, "تذکر", "چنین شخصی در سامانه وجود ندارد!");
+              QMessageBox::warning(this, "error", "There is no such person in the system!");
               return;
 
           }

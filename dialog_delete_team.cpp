@@ -38,6 +38,6 @@ void Dialog_delete_team::on_buttonBox_accepted()
 //mixing etrtators with const_iterators
 }
 }
- QMessageBox::warning(this, "تذکر", " شما تیمی بااین اسم ایجاد نکرده اید!");
+ QMessageBox::warning(this, "error!", " No team found with this name!");
 }
 

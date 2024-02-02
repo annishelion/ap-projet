@@ -41,7 +41,7 @@ void Dialog_view_added_organ_to_organ::on_show_organ_of_organ_btn_clicked()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " ارگانی با این نام یافت نشد!");
+      QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
         for (int a =0 ; Data::get_organs().size() > a ;a++){
