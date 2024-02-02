@@ -32,15 +32,14 @@ void team_management::on_create_team_btn_clicked()
 
 void team_management::on_show_my_teams_btn_clicked()
 {
-   ui->listWidget->clear();
-    for (int i = 0; i < Data::get_teams().size(); i++) {
-       for(int a = 0 ; Data::get_teams()[i].get_members_of_team().size() > a ; a++){
-           if(Data::get_teams()[i].get_members_of_team()[a] == Data::get_onlineId())
-ui->listWidget->addItem(Data::get_teams()[i].get_name_of_team());
-       }
+    ui->listWidget->clear();
+     for (int i = 0; i < Data::get_teams().size(); i++) {
 
-        }
-        }
+            if(Data::get_teams()[i].get_head_of_team() == Data::get_onlineId())
+ ui->listWidget->addItem(Data::get_teams()[i].get_name_of_team());
+
+
+         }     }
 
 
 

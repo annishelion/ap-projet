@@ -26,6 +26,11 @@
       <height>481</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
      <string>task manegment</string>
     </property>
@@ -38,17 +43,27 @@
        <height>401</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="title">
       <string>assignment</string>
      </property>
      <widget class="QPushButton" name="assing_task_to_user_btn">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>40</y>
         <width>161</width>
         <height>71</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>assign task to user</string>
@@ -57,11 +72,16 @@
      <widget class="QPushButton" name="assign_task_to_project_btn">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>120</y>
         <width>161</width>
         <height>71</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>assign task to project</string>
@@ -70,11 +90,16 @@
      <widget class="QPushButton" name="assign_task_to_team_btn">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>200</y>
         <width>161</width>
         <height>71</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>assign task to team</string>
@@ -102,6 +127,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Edit</string>
       </property>
@@ -116,17 +146,28 @@
        <height>401</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="title">
       <string>show tasks you created</string>
      </property>
      <widget class="QPushButton" name="show_task_btn">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>10</x>
         <y>360</y>
-        <width>141</width>
+        <width>161</width>
         <height>29</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>show </string>
@@ -164,6 +205,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>create task</string>
       </property>
@@ -190,6 +236,14 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
       </property>
@@ -206,7 +260,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

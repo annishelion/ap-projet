@@ -58,7 +58,7 @@ void project_manegment::on_pushButton_5_clicked()
 
 void project_manegment::on_pushButton_9_clicked()
 {
-    {
+
         ui->listWidget->clear();
         for (int i = 0; i < Data::get_projects().size(); i++) {
             if (Data::get_onlineId() == Data::get_projects()[i].get_head_of_project()) {
@@ -66,7 +66,7 @@ void project_manegment::on_pushButton_9_clicked()
             }
         }
 
-    }
+
 }
 
 

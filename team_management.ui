@@ -17,14 +17,19 @@
    <widget class="QGroupBox" name="my_teams_group">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>280</x>
       <y>30</y>
       <width>231</width>
       <height>501</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>my teams</string>
+     <string>My teams</string>
     </property>
     <widget class="QPushButton" name="show_my_teams_btn">
      <property name="geometry">
@@ -55,33 +60,38 @@
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>181</width>
+      <width>221</width>
       <height>501</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>team manegment</string>
+     <string>Team manegment</string>
     </property>
     <widget class="QPushButton" name="create_team_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>30</y>
-       <width>141</width>
-       <height>51</height>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
-      <string>create a team</string>
+      <string>Create a team</string>
      </property>
     </widget>
     <widget class="QPushButton" name="edit_team_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
-       <width>141</width>
-       <height>51</height>
+       <y>270</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
@@ -92,9 +102,9 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>150</y>
-       <width>141</width>
-       <height>51</height>
+       <y>190</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
@@ -105,9 +115,9 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
-       <width>141</width>
-       <height>51</height>
+       <y>110</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
@@ -118,14 +128,15 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>270</y>
-       <width>141</width>
-       <height>51</height>
+       <y>350</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>7</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -136,52 +147,57 @@
    <widget class="QGroupBox" name="team_management_group_2">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>550</x>
       <y>30</y>
-      <width>191</width>
+      <width>221</width>
       <height>471</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>public manage</string>
+     <string>Public manage</string>
     </property>
     <widget class="QPushButton" name="teams_oforgan_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>30</y>
-       <width>141</width>
-       <height>51</height>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
-      <string>show team of organ</string>
+      <string>Show team of organ</string>
      </property>
     </widget>
     <widget class="QPushButton" name="filter_teams_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
-       <width>141</width>
-       <height>51</height>
+       <y>110</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
-      <string> sort</string>
+      <string>Sort</string>
      </property>
     </widget>
     <widget class="QPushButton" name="add_user_to_organ_btn">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>150</y>
-       <width>141</width>
-       <height>51</height>
+       <y>190</y>
+       <width>171</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
-      <string>add team to organ</string>
+      <string>Add team to organ</string>
      </property>
     </widget>
    </widget>
@@ -192,7 +208,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
