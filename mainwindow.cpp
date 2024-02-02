@@ -6,6 +6,7 @@
 #include "firstpage.h"
 #include "ui_firstpage.h"
 #include "user.h"
+#include "forget_password.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -368,5 +369,12 @@ void MainWindow::on_SignInBtn_clicked()
             }
         }
     QMessageBox::warning(this, "error", "Please check your account name and try again.!");
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    forget_password * f = new forget_password(this);
+    f->show();
 }
 

@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    add_new_password.cpp \
     dialog_add_member_to_project.cpp \
     dialog_add_member_to_team.cpp \
     dialog_add_organ.cpp \
@@ -41,6 +42,7 @@ SOURCES += \
     dialog_team_to_organ.cpp \
     dialog_view_added_organ_to_organ.cpp \
     firstpage.cpp \
+    forget_password.cpp \
     main.cpp \
     mainwindow.cpp \
     organ_manegment.cpp \
@@ -54,6 +56,7 @@ SOURCES += \
     user.cpp
 
 HEADERS += \
+    add_new_password.h \
     data.h \
     dialog_add_member_to_project.h \
     dialog_add_member_to_team.h \
@@ -87,6 +90,7 @@ HEADERS += \
     dialog_team_to_organ.h \
     dialog_view_added_organ_to_organ.h \
     firstpage.h \
+    forget_password.h \
     mainwindow.h \
     organ_manegment.h \
     organization.h \
@@ -99,6 +103,7 @@ HEADERS += \
     user.h
 
 FORMS += \
+    add_new_password.ui \
     dialog_add_member_to_project.ui \
     dialog_add_member_to_team.ui \
     dialog_add_organ.ui \
@@ -131,6 +136,7 @@ FORMS += \
     dialog_team_to_organ.ui \
     dialog_view_added_organ_to_organ.ui \
     firstpage.ui \
+    forget_password.ui \
     mainwindow.ui \
     organ_manegment.ui \
     project_manegment.ui \
