@@ -12,6 +12,7 @@ SOURCES += \
     dialog_add_member_to_project.cpp \
     dialog_add_member_to_team.cpp \
     dialog_add_organ.cpp \
+    dialog_add_organ_to_organ.cpp \
     dialog_add_project.cpp \
     dialog_add_project_to_organ.cpp \
     dialog_add_task.cpp \
@@ -57,6 +58,7 @@ HEADERS += \
     dialog_add_member_to_project.h \
     dialog_add_member_to_team.h \
     dialog_add_organ.h \
+    dialog_add_organ_to_organ.h \
     dialog_add_project.h \
     dialog_add_project_to_organ.h \
     dialog_add_task.h \
@@ -100,6 +102,7 @@ FORMS += \
     dialog_add_member_to_project.ui \
     dialog_add_member_to_team.ui \
     dialog_add_organ.ui \
+    dialog_add_organ_to_organ.ui \
     dialog_add_project.ui \
     dialog_add_project_to_organ.ui \
     dialog_add_task.ui \

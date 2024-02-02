@@ -37,7 +37,7 @@ void Dialog_add_organ::on_add_organ_btn_clicked()
 
     Data::get_organs().append(orr);
 
-
+/*
     QFile ffff("Organizations.json");
     ffff.open(QIODevice::ReadOnly);
     QJsonDocument dddd = QJsonDocument::fromJson(ffff.readAll());
@@ -67,7 +67,7 @@ void Dialog_add_organ::on_add_organ_btn_clicked()
     ffff.open(QIODevice::WriteOnly);
     ffff.write(dddd.toJson());
     ffff.close();
-
+*/
 
 //return ;
 

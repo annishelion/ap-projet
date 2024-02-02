@@ -31,7 +31,7 @@ void Dialog_create_team::on_buttonBox_accepted()
     te.add_member(Data::get_onlineId());
     Data::get_teams().append(te);
 
-
+/*
     QFile fff("Teams.json");
     fff.open(QIODevice::ReadOnly);
     QJsonDocument ddd = QJsonDocument::fromJson(fff.readAll());
@@ -49,5 +49,6 @@ void Dialog_create_team::on_buttonBox_accepted()
     fff.open(QIODevice::WriteOnly);
     fff.write(ddd.toJson());
     fff.close();
+    */
 }
 

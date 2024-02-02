@@ -76,6 +76,7 @@ static void write_on_file() {
     QJsonObject o = d.object();
     QJsonObject temp = o[get_iterator_user()->get_username()].toObject();
 //user header
+
     temp["Name"] = get_iterator_user()->get_Name();
 temp["username"] = get_iterator_user()->get_username();
 temp["email"] = get_iterator_user()->get_email();
@@ -86,7 +87,7 @@ f.open(QIODevice::WriteOnly);
 f.write(d.toJson());
 f.close();
 
-
+/*
 QFile ff("Tasks.json");
 ff.open(QIODevice::ReadOnly);
 QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
@@ -94,20 +95,162 @@ ff.close();
 QJsonObject oo = dd.object();
 QJsonObject temp2 = oo[get_iterator_task()->get_name_of_task()].toObject();
 //user header
-temp2["Name of task"] = get_iterator_task()->get_name_of_task();
-temp2["priority"] = get_iterator_task()->get_priority_for_task();
-temp2["project respons"] = get_iterator_task()->get_project_Respons_the_task();
-temp2["team respons"] = get_iterator_task()->get_team_Respons_the_task();
-temp2["user respons"] = get_iterator_task()->get_user_Respons_the_task();
-temp2["username creator"] = get_iterator_task()->get_username_of_cteator();
-temp2["archive"] = get_iterator_task()->get_is_archive();
-oo[get_iterator_task()->get_name_of_task()] = temp2;
+
+for (int i = 0; i < Data::get_tasks().size(); i++) {
+
+temp2["Name of task"] = get_tasks()[i].get_name_of_task();
+temp2["priority"] = get_tasks()[i].get_priority_for_task();
+temp2["project respons"] = get_tasks()[i].get_project_Respons_the_task();
+temp2["team respons"] = get_tasks()[i].get_team_Respons_the_task();
+temp2["user respons"] = get_tasks()[i].get_user_Respons_the_task();
+temp2["username creator"] = get_tasks()[i].get_username_of_cteator();
+temp2["archive"] = get_tasks()[i].get_is_archive();
+//oo[get_tasks()[i].get_name_of_task()[i] = temp2;
 dd.setObject(oo);
 ff.open(QIODevice::WriteOnly);
 ff.write(dd.toJson());
 ff.close();
+}
+*/
+//QFile ff("Tasks.json");
+//ff.open(QIODevice::ReadOnly);
+//if (ff.isOpen() && Data::get_tasks().isEmpty()) {
+ //   QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
+//    QJsonObject oo = dd.object();
+//    QJsonObject temp2;
+//     task tas(" " , " ");
+//
+//QStringList sll = oo.keys();
+//for (int i = 0; i < sll.size(); i++) {
+//    temp2 = oo[sll[i]].toObject();
+//    //user header
+//    tas.set_name_of_task(temp2["Name of task"].toString());
+//    tas.set_priority_for_task(temp2["priority"].toString());
+//    tas.set_project_Respons_the_task(temp2["project respons"].toString());
+ //   tas.set_team_Respons_the_task(temp2["team respons"].toString());
+//    tas.set_user_Respons_the_task(temp2["user respons"].toString());
+//    tas.set_uesr_name_of_creator(temp2["username creator"].toString());
+//    tas.set_is_archive(temp2["archive"].toInt());
+
+//Data::get_tasks().append(tas);
+//}
+//}
+//v//////////////////////////////////////////////////////////////////////////
 
 
+QFile ff("Tasks.json");
+ff.open(QIODevice::ReadOnly);
+QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
+ff.close();
+QJsonObject oo = dd.object();
+QJsonObject temp2;
+for(int b =0 ; b <Data::get_tasks().size() ; b++){
+task u = Data::get_tasks()[b];
+temp2["Name of task"] = u.get_name_of_task();
+temp2["priority"] = u.get_priority_for_task();
+temp2["project respons"] = u.get_project_Respons_the_task();
+temp2["team respons"] = u.get_team_Respons_the_task();
+temp2["user respons"] = u.get_user_Respons_the_task();
+temp2["username creator"] = u.get_username_of_cteator();
+temp2["archive"] = u.get_is_archive();
+oo[u.get_name_of_task()] = temp2;
+}
+dd.setObject(oo);
+ff.open(QIODevice::WriteOnly);
+ff.write(dd.toJson());
+ff.close();
+//b///////////////////////
+QFile ffff("Organizations.json");
+ffff.open(QIODevice::ReadOnly);
+QJsonDocument dddd = QJsonDocument::fromJson(ffff.readAll());
+ffff.close();
+QJsonObject oooo = dddd.object();
+QJsonObject temp4;
+for(int q =0 ; q<Data::get_organs().size() ; q++){
+organization orr = Data::get_organs()[q];
+    temp4["head of organ"] = orr.get_head_of_organ();
+temp4["name of organ"] =orr.get_name_of_organ();
+//temp["archive"] = get_iterator_organ()->get_member_of_organ();
+QJsonArray arr4;
+
+temp4["users of organ"] = arr4;
+//temp["archive"] = get_iterator_organ()->get_organ_of_organ();
+QJsonArray arr5;
+
+temp4["organ of organ"] = arr5;
+//temp["archive"] = get_iterator_organ()->get_project_of_organ();
+QJsonArray arr6;
+
+temp4["projects of organ"] = arr6;
+//temp["archive"] = get_iterator_organ()->get_teams_of_organ();
+QJsonArray arr7;
+
+temp4["teams of organ"] = arr7;
+
+oooo[orr.get_name_of_organ()] = temp4;
+}
+dddd.setObject(oooo);
+
+ffff.open(QIODevice::WriteOnly);
+ffff.write(dddd.toJson());
+ffff.close();
+//b///////////////////////////
+
+QFile fffff("projects.json");
+fffff.open(QIODevice::ReadOnly);
+QJsonDocument ddddd = QJsonDocument::fromJson(fffff.readAll());
+fffff.close();
+QJsonObject ooooo = ddddd.object();
+QJsonObject temp5;
+for(int i2 =0 ; i2 < Data::get_projects().size() ; i2++){
+    project pr = Data:: get_projects()[i2];
+temp5["head of project"] = pr.get_head_of_project();
+temp5["name of project"] =pr.get_name_of_project();
+temp5["situation"] = pr.get_situation();
+//temp["archive"] = ;
+QJsonArray arr;
+
+temp5["users of project"] = arr;
+//temp["archive"] = get_iterator_pro()->add_task_to_project();
+QJsonArray arr2;
+
+temp5["tasks of project"] = arr2;
+//temp["archive"] = get_iterator_pro()->get_team_of_project();
+QJsonArray arr3;
+
+temp5["teams of project"] = arr3;
+ooooo[pr.get_name_of_project()] = temp5;
+ddddd.setObject(ooooo);
+}
+fffff.open(QIODevice::WriteOnly);
+fffff.write(ddddd.toJson());
+fffff.close();
+//b////////////////
+
+QFile fff("Teams.json");
+fff.open(QIODevice::ReadOnly);
+QJsonDocument ddd = QJsonDocument::fromJson(fff.readAll());
+fff.close();
+QJsonObject ooo = ddd.object();
+QJsonObject temp3;
+for (int ii =0 ; ii < Data::get_teams().size() ; ii++){
+team te = Data::get_teams()[ii];
+    temp3["head of team"] =te.get_head_of_team();
+temp3["name of team"] = te.get_name_of_team();
+//temp["archive"] = 0;
+QJsonArray arr8;
+arr8.append(Data::get_onlineId());
+temp3["users of team"] = arr8;
+ooo[te.get_name_of_team()] = temp3;
+}
+ddd.setObject(ooo);
+fff.open(QIODevice::WriteOnly);
+fff.write(ddd.toJson());
+fff.close();
+
+
+//v////////////////////////////////////////////////////////////////////////////
+/*
 QFile fff("Teams.json");
 fff.open(QIODevice::ReadOnly);
 QJsonDocument ddd = QJsonDocument::fromJson(fff.readAll());
@@ -127,9 +270,12 @@ ddd.setObject(ooo);
 fff.open(QIODevice::WriteOnly);
 fff.write(ddd.toJson());
 fff.close();
+*/
 
 
 
+
+/*
 QFile ffff("Organizations.json");
 ffff.open(QIODevice::ReadOnly);
 QJsonDocument dddd = QJsonDocument::fromJson(ffff.readAll());
@@ -164,11 +310,11 @@ dddd.setObject(oooo);
 ffff.open(QIODevice::WriteOnly);
 ffff.write(dddd.toJson());
 ffff.close();
+*/
 
 
 
-
-
+/*
 QFile fffff("Projects.json");
 fffff.open(QIODevice::ReadOnly);
 QJsonDocument ddddd = QJsonDocument::fromJson(fffff.readAll());
@@ -200,7 +346,7 @@ ddddd.setObject(ooooo);
 fffff.open(QIODevice::WriteOnly);
 fffff.write(ddddd.toJson());
 fffff.close();
-
+*/
 
 
 

@@ -37,7 +37,7 @@ void Dialog_add_project::on_buttonBox_accepted()
     Data::get_projects().append(pr);
 
 
-
+/*
     QFile fffff("projects.json");
     fffff.open(QIODevice::ReadOnly);
     QJsonDocument ddddd = QJsonDocument::fromJson(fffff.readAll());
@@ -64,7 +64,7 @@ void Dialog_add_project::on_buttonBox_accepted()
     fffff.open(QIODevice::WriteOnly);
     fffff.write(ddddd.toJson());
     fffff.close();
-
+*/
     //organization orr(" " , " ");
     //orr.set_name_of_organ(ui->add_organ_input->text());
     //orr.set_head_of_organ(Data::get_onlineId());
