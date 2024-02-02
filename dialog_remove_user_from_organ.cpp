@@ -40,7 +40,7 @@ void Dialog_remove_user_from_organ::on_buttonBox_accepted()
                 flag = 1;
 }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error", " This person is not a member of this project!");
         return;
 
     }
@@ -51,7 +51,7 @@ void Dialog_remove_user_from_organ::on_buttonBox_accepted()
                    flag2 = 1;
    }
        if(flag2 == 0 ){
-           QMessageBox::warning(this, "تذکر", " سازمانی با این نام یافت نشد!");
+        QMessageBox::warning(this, "error!", " No organization with this name was found!");
            return;
 
        }
@@ -69,7 +69,7 @@ Data::get_organs()[a].get_member_of_organ().erase(Data::get_organs()[a].get_memb
 
                    }
    }
-              QMessageBox::warning(this, "تذکر", " این شخص در این گروه عضو نیست!");
+              QMessageBox::warning(this, "error", " This person is not a member of this group!");
               return;
 
 }

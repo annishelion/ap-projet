@@ -38,7 +38,7 @@ void Dialog_remove_user_from_project::on_remove_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error", " No person found with this name!");
         return;
 
     }
@@ -49,7 +49,7 @@ void Dialog_remove_user_from_project::on_remove_clicked()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " پروژه ای با این نام یافت نشد!");
+        QMessageBox::warning(this, "error", " No project found with this name!");
         return;
 
     }
@@ -67,7 +67,7 @@ void Dialog_remove_user_from_project::on_remove_clicked()
 
             }
     }
-    QMessageBox::warning(this, "تذکر", " این شخص در این پروژه عضو نیست!");
+    QMessageBox::warning(this, "error", " This person is not a member of this project!");
     this->close();
 }
 

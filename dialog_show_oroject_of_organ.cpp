@@ -31,7 +31,7 @@ void Dialog_show_oroject_of_organ::on_pushButton_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " سازمانی بااین نام یافت نشد!");
+    QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
 

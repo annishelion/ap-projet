@@ -20,7 +20,7 @@ void Dialog_create_team::on_buttonBox_accepted()
     for(int i = 0 ; Data::get_teams().size() > i ; i++){
         if(Data::get_teams()[i].get_name_of_team() == ui->name_of_team_input->text())
         {
-             QMessageBox::warning(this, "تذکر", "اسم تیم تکراری است!");
+             QMessageBox::warning(this, "error", "The name of the team is repeated!");
              return;
         }
 

@@ -15,6 +15,11 @@ public:
     explicit Dialog_add_organ_to_organ(QWidget *parent = nullptr);
     ~Dialog_add_organ_to_organ();
 
+private slots:
+    void on_btn_show_clicked();
+
+    void on_buttonBox_accepted();
+
 private:
     Ui::Dialog_add_organ_to_organ *ui;
 };

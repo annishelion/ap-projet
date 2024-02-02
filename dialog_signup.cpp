@@ -25,12 +25,12 @@ void Dialog_signUp::on_buttonBox_accepted()
         QMessageBox::warning(this, "error", "Please fill in the Confirms your information!");
         return;
     }
-   // if(ui->password_input->text().size() < 9)
-   // {
-      //  QMessageBox::warning(this, "error", "Password must be more than 8 digits!");
-      //  return;
+    if(ui->password_input->text().size() < 9)
+    {
+        QMessageBox::warning(this, "error", "Password must be more than 8 charecter!");
+        return;
 
-    //}
+    }
     for (int i = 0; i < Data::get_players().size(); i++) {
         if (ui->username_input->text() == Data::get_players()[i].get_username()) {
             QMessageBox::warning(this, "error", "Repetitious username!");
