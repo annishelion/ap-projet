@@ -7,6 +7,7 @@
 #include "dialog_asign_task_to_user.h"
 #include "dialog_assign_task_to_project.h"
 #include "dialog_assign_task_to_team.h"
+#include "dialog_add_comment.h"
 task_manegment::task_manegment(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::task_manegment)
@@ -33,7 +34,8 @@ void task_manegment::on_show_task_btn_clicked()
     ui->show_task_listwidget->clear();
     for (int i = 0; i < Data::get_tasks().size(); i++) {
         if (Data::get_onlineId() == Data::get_tasks()[i].get_username_of_cteator()) {
-            ui->show_task_listwidget->addItem(Data::get_tasks()[i].get_name_of_task());
+
+            ui->show_task_listwidget->addItem(Data::get_tasks()[i].get_name_of_task() + Data::get_tasks()[i].get_priority_for_task());
         }
 }
 }
@@ -81,5 +83,18 @@ void task_manegment::on_assign_task_to_team_btn_clicked()
 {
     Dialog_assign_task_to_team *assign_to_team = new Dialog_assign_task_to_team(this);
     assign_to_team ->show();
+}
+
+
+void task_manegment::on_assign_task_to_team_btn_2_clicked()
+{
+    Dialog_add_comment * s = new Dialog_add_comment(this);
+    s->show();
+}
+
+
+void task_manegment::on_assign_task_to_team_btn_3_clicked()
+{
+
 }
 

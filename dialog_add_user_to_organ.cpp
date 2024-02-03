@@ -18,7 +18,14 @@ Dialog_add_user_to_organ::~Dialog_add_user_to_organ()
 
 void Dialog_add_user_to_organ::on_show_clicked()
 {
+    ui->listWidget->clear();
+    for (int i = 0; i < Data::get_organs().size(); i++) {
 
+        if(Data::get_organs()[i].get_head_of_organ() == Data::get_onlineId())
+            ui->listWidget->addItem(Data::get_organs()[i].get_name_of_organ());
+
+
+    }
 }
 
 

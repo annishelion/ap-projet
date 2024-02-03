@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     add_new_password.cpp \
+    dialog_add_comment.cpp \
     dialog_add_member_to_project.cpp \
     dialog_add_member_to_team.cpp \
     dialog_add_organ.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     dialog_remove_user_from_organ.cpp \
     dialog_remove_user_from_project.cpp \
     dialog_remove_user_from_team.cpp \
+    dialog_show_comment.cpp \
     dialog_show_oroject_of_organ.cpp \
     dialog_show_teams_of_organ.cpp \
     dialog_signup.cpp \
@@ -58,6 +60,7 @@ SOURCES += \
 HEADERS += \
     add_new_password.h \
     data.h \
+    dialog_add_comment.h \
     dialog_add_member_to_project.h \
     dialog_add_member_to_team.h \
     dialog_add_organ.h \
@@ -81,6 +84,7 @@ HEADERS += \
     dialog_remove_user_from_organ.h \
     dialog_remove_user_from_project.h \
     dialog_remove_user_from_team.h \
+    dialog_show_comment.h \
     dialog_show_oroject_of_organ.h \
     dialog_show_teams_of_organ.h \
     dialog_signup.h \
@@ -104,6 +108,7 @@ HEADERS += \
 
 FORMS += \
     add_new_password.ui \
+    dialog_add_comment.ui \
     dialog_add_member_to_project.ui \
     dialog_add_member_to_team.ui \
     dialog_add_organ.ui \
@@ -127,6 +132,7 @@ FORMS += \
     dialog_remove_user_from_organ.ui \
     dialog_remove_user_from_project.ui \
     dialog_remove_user_from_team.ui \
+    dialog_show_comment.ui \
     dialog_show_oroject_of_organ.ui \
     dialog_show_teams_of_organ.ui \
     dialog_signup.ui \
