@@ -16,6 +16,8 @@ team_management::team_management(QWidget *parent) :
     ui(new Ui::team_management)
 {
     ui->setupUi(this);
+    setMinimumSize(800,600);
+    setMaximumSize(800,600);
 }
 
 team_management::~team_management()
@@ -32,15 +34,14 @@ void team_management::on_create_team_btn_clicked()
 
 void team_management::on_show_my_teams_btn_clicked()
 {
-   ui->listWidget->clear();
-    for (int i = 0; i < Data::get_teams().size(); i++) {
-       for(int a = 0 ; Data::get_teams()[i].get_members_of_team().size() > a ; a++){
-           if(Data::get_teams()[i].get_members_of_team()[a] == Data::get_onlineId())
-ui->listWidget->addItem(Data::get_teams()[i].get_name_of_team());
-       }
+    ui->listWidget->clear();
+     for (int i = 0; i < Data::get_teams().size(); i++) {
 
-        }
-        }
+            if(Data::get_teams()[i].get_head_of_team() == Data::get_onlineId())
+ ui->listWidget->addItem(Data::get_teams()[i].get_name_of_team());
+
+
+         }     }
 
 
 
@@ -55,7 +56,7 @@ de->show();
 
 void team_management::on_add_user_to_team_btn_clicked()
 {
-    Dialog_add_member_to_team *mem = new Dialog_add_member_to_team();
+    Dialog_add_member_to_team *mem = new Dialog_add_member_to_team(this);
     mem->show();
 
 }
@@ -63,35 +64,35 @@ void team_management::on_add_user_to_team_btn_clicked()
 
 void team_management::on_edit_team_btn_clicked()
 {
-    Dialog_edit_team *edi = new Dialog_edit_team();
+    Dialog_edit_team *edi = new Dialog_edit_team(this);
     edi->show();
 }
 
 
 void team_management::on_remove_user_from_organ_btn_clicked()
 {
-Dialog_remove_user_from_team *remo = new Dialog_remove_user_from_team();
+Dialog_remove_user_from_team *remo = new Dialog_remove_user_from_team(this);
 remo->show();
 }
 
 
 void team_management::on_teams_oforgan_btn_clicked()
 {
-    Dialog_show_teams_of_organ *sd = new Dialog_show_teams_of_organ();
+    Dialog_show_teams_of_organ *sd = new Dialog_show_teams_of_organ(this);
     sd->show();
 }
 
 
 void team_management::on_add_user_to_organ_btn_clicked()
 {
-    Dialog_team_to_organ *ee = new Dialog_team_to_organ();
+    Dialog_team_to_organ *ee = new Dialog_team_to_organ(this);
     ee->show();
 }
 
 
 void team_management::on_filter_teams_btn_clicked()
 {
-    Dialog_sort_team *s = new Dialog_sort_team();
+    Dialog_sort_team *s = new Dialog_sort_team(this);
     s->show();
 }
 

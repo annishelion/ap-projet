@@ -8,6 +8,8 @@ Dialog_show_oroject_of_organ::Dialog_show_oroject_of_organ(QWidget *parent) :
     ui(new Ui::Dialog_show_oroject_of_organ)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_show_oroject_of_organ::~Dialog_show_oroject_of_organ()
@@ -31,7 +33,7 @@ void Dialog_show_oroject_of_organ::on_pushButton_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " سازمانی بااین نام یافت نشد!");
+    QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
 

@@ -7,6 +7,8 @@ Dialog_delete_project::Dialog_delete_project(QWidget *parent) :
     ui(new Ui::Dialog_delete_project)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_delete_project::~Dialog_delete_project()

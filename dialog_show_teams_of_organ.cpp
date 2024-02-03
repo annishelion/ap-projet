@@ -6,6 +6,8 @@ Dialog_show_teams_of_organ::Dialog_show_teams_of_organ(QWidget *parent) :
     ui(new Ui::Dialog_show_teams_of_organ)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_show_teams_of_organ::~Dialog_show_teams_of_organ()

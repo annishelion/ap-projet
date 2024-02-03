@@ -7,6 +7,8 @@ Dialog_sort_team::Dialog_sort_team(QWidget *parent)
     , ui(new Ui::Dialog_sort_team)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_sort_team::~Dialog_sort_team()

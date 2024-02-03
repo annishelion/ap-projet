@@ -7,6 +7,8 @@ Dialog_asign_task_to_user::Dialog_asign_task_to_user(QWidget *parent)
     , ui(new Ui::Dialog_asign_task_to_user)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_asign_task_to_user::~Dialog_asign_task_to_user()

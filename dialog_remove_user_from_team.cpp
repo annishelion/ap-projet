@@ -11,6 +11,8 @@ Dialog_remove_user_from_team::Dialog_remove_user_from_team(QWidget *parent) :
     ui(new Ui::Dialog_remove_user_from_team)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_remove_user_from_team::~Dialog_remove_user_from_team()
@@ -44,7 +46,7 @@ void Dialog_remove_user_from_team::on_remove_btn_clicked()
                 flag = 1;
 }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " شخصی بااین نام یافت نشد!");
+        QMessageBox::warning(this, "error", " No person found with this name!");
         return;
 
     }
@@ -55,7 +57,7 @@ void Dialog_remove_user_from_team::on_remove_btn_clicked()
                    flag2 = 1;
    }
        if(flag2 == 0 ){
-           QMessageBox::warning(this, "تذکر", " تیمی با این نام یافت نشد!");
+           QMessageBox::warning(this, "error!", " No team found with this name!");
            return;
 
        }
@@ -72,7 +74,7 @@ void Dialog_remove_user_from_team::on_remove_btn_clicked()
 
                    }
    }
-              QMessageBox::warning(this, "تذکر", " این شخص در این گروه عضو نیست!");
+              QMessageBox::warning(this, "error", " This person is not a member of this group!");
               return;
 
 }

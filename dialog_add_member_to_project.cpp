@@ -7,6 +7,8 @@ Dialog_add_member_to_project::Dialog_add_member_to_project(QWidget *parent)
     , ui(new Ui::Dialog_add_member_to_project)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_add_member_to_project::~Dialog_add_member_to_project()

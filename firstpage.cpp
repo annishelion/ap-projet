@@ -10,6 +10,8 @@ firstpage::firstpage(QWidget *parent) :
     ui(new Ui::firstpage)
 {
     ui->setupUi(this);
+    setMinimumSize(800,600);
+    setMaximumSize(800,600);
     setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
 }
 
@@ -112,7 +114,7 @@ void firstpage::on_project_group_clicked()
 
 void firstpage::on_actionexit_triggered()
 {
-    //Data::write_on_file();
+    Data::write_on_file();
     this->close();
 }
 

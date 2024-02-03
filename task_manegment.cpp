@@ -12,6 +12,8 @@ task_manegment::task_manegment(QWidget *parent) :
     ui(new Ui::task_manegment)
 {
     ui->setupUi(this);
+    setMinimumSize(800,600);
+    setMaximumSize(800,600);
 }
 
 task_manegment::~task_manegment()
@@ -38,7 +40,7 @@ void task_manegment::on_show_task_btn_clicked()
 
 void task_manegment::on_create_task_btn_clicked()
 {
-    Dialog_add_task *di = new Dialog_add_task();
+    Dialog_add_task *di = new Dialog_add_task(this);
     di->show();
 }
 
@@ -63,21 +65,21 @@ dia->show();
 
 void task_manegment::on_assing_task_to_user_btn_clicked()
 {
-    Dialog_asign_task_to_user *tas = new Dialog_asign_task_to_user();
+    Dialog_asign_task_to_user *tas = new Dialog_asign_task_to_user(this);
     tas->show();
 
 }
 
 void task_manegment::on_assign_task_to_project_btn_clicked()
 {
-    Dialog_assign_task_to_project *assign_to_project = new Dialog_assign_task_to_project();
+    Dialog_assign_task_to_project *assign_to_project = new Dialog_assign_task_to_project(this);
     assign_to_project ->show();
 }
 
 
 void task_manegment::on_assign_task_to_team_btn_clicked()
 {
-    Dialog_assign_task_to_team *assign_to_team = new Dialog_assign_task_to_team();
+    Dialog_assign_task_to_team *assign_to_team = new Dialog_assign_task_to_team(this);
     assign_to_team ->show();
 }
 

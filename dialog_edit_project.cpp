@@ -7,6 +7,8 @@ Dialog_edit_project::Dialog_edit_project(QWidget *parent) :
     ui(new Ui::Dialog_edit_project)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_edit_project::~Dialog_edit_project()
@@ -43,7 +45,7 @@ void Dialog_edit_project::on_buttonBox_accepted()
             flag2 = 1;
     }
     if(flag2 == 0 ){
-        QMessageBox::warning(this, "تذکر", " ارگانی با این نام یافت نشد!");
+      QMessageBox::warning(this, "error!", " No organization with this name was found!");
         return;
 
     }
@@ -55,7 +57,7 @@ void Dialog_edit_project::on_buttonBox_accepted()
             flag3 = 1;
     }
     if(flag3 == 0 ){
-        QMessageBox::warning(this, "تذکر", "چنین شخصی در سامانه وجود ندارد!");
+        QMessageBox::warning(this, "error", "There is no such person in the system!");
         return;
 
     }

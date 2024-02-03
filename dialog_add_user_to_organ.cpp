@@ -7,6 +7,8 @@ Dialog_add_user_to_organ::Dialog_add_user_to_organ(QWidget *parent)
     , ui(new Ui::Dialog_add_user_to_organ)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_add_user_to_organ::~Dialog_add_user_to_organ()

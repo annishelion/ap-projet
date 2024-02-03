@@ -8,6 +8,8 @@ Dialog_assign_task_to_project::Dialog_assign_task_to_project(QWidget *parent)
     , ui(new Ui::Dialog_assign_task_to_project)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_assign_task_to_project::~Dialog_assign_task_to_project()
@@ -56,7 +58,7 @@ void Dialog_assign_task_to_project::on_assign_tasks_to_project_clicked()
             flag4 = 1;
     }
     if(flag4 == 0 ){
-        QMessageBox::warning(this, "تذکر", " وظیفه ای با این نام یاقت نشد!");
+        QMessageBox::warning(this, "error", " There was no task with this name!");
         return;
 
 

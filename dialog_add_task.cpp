@@ -8,6 +8,8 @@ Dialog_add_task::Dialog_add_task(QWidget *parent) :
     ui(new Ui::Dialog_add_task)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_add_task::~Dialog_add_task()
@@ -26,6 +28,27 @@ void Dialog_add_task::on_buttonBox_accepted()
     u.set_name_of_task(ui->name_of_task_input->text());
     u.set_uesr_name_of_creator(Data::get_onlineId());
     Data::get_tasks().append(u);
+
+
+    QFile ff("Tasks.json");
+    ff.open(QIODevice::ReadOnly);
+    QJsonDocument dd = QJsonDocument::fromJson(ff.readAll());
+    ff.close();
+    QJsonObject oo = dd.object();
+    QJsonObject temp2;
+    temp2["Name of task"] = u.get_name_of_task();
+    temp2["priority"] = u.get_priority_for_task();
+    temp2["project respons"] = u.get_project_Respons_the_task();
+    temp2["team respons"] = u.get_team_Respons_the_task();
+    temp2["user respons"] = u.get_user_Respons_the_task();
+    temp2["username creator"] = u.get_username_of_cteator();
+    temp2["archive"] = u.get_is_archive();
+    oo[u.get_name_of_task()] = temp2;
+    dd.setObject(oo);
+    ff.open(QIODevice::WriteOnly);
+    ff.write(dd.toJson());
+    ff.close();
+
     //return;
 }
 

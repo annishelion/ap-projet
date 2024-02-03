@@ -7,6 +7,8 @@ Dialog_delete_team::Dialog_delete_team(QWidget *parent) :
     ui(new Ui::Dialog_delete_team)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_delete_team::~Dialog_delete_team()
@@ -38,6 +40,6 @@ void Dialog_delete_team::on_buttonBox_accepted()
 //mixing etrtators with const_iterators
 }
 }
- QMessageBox::warning(this, "تذکر", " شما تیمی بااین اسم ایجاد نکرده اید!");
+ QMessageBox::warning(this, "error!", " No team found with this name!");
 }
 

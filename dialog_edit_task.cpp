@@ -7,6 +7,8 @@ dialog_edit_task::dialog_edit_task(QWidget *parent) :
     ui(new Ui::dialog_edit_task)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 dialog_edit_task::~dialog_edit_task()

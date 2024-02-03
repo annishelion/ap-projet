@@ -23,8 +23,13 @@
       <height>491</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>my tasks</string>
+     <string>My tasks</string>
     </property>
     <widget class="QListWidget" name="mytask_view">
      <property name="geometry">
@@ -79,11 +84,16 @@
       <x>50</x>
       <y>40</y>
       <width>191</width>
-      <height>481</height>
+      <height>271</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>manegment</string>
+     <string>MANEGMENT</string>
     </property>
     <widget class="QPushButton" name="teams_btn">
      <property name="geometry">
@@ -94,8 +104,15 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
      <property name="text">
-      <string>teams</string>
+      <string>TEAM</string>
      </property>
     </widget>
     <widget class="QPushButton" name="organ_group">
@@ -107,8 +124,13 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
-      <string>organizations</string>
+      <string>ORGANIZATION</string>
      </property>
     </widget>
     <widget class="QPushButton" name="project_group">
@@ -120,8 +142,13 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
-      <string>projects </string>
+      <string>PROJECT</string>
      </property>
     </widget>
     <widget class="QPushButton" name="task_group">
@@ -133,8 +160,13 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
-      <string>tasks</string>
+      <string>TASK</string>
      </property>
     </widget>
    </widget>
@@ -147,8 +179,13 @@
       <height>491</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
-     <string>archive </string>
+     <string>Archive </string>
     </property>
     <widget class="QLineEdit" name="turn_over_to_my_tasks_input">
      <property name="geometry">

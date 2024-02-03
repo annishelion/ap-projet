@@ -7,6 +7,8 @@ Dialog_sort_organs::Dialog_sort_organs(QWidget *parent)
     , ui(new Ui::Dialog_sort_organs)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_sort_organs::~Dialog_sort_organs()

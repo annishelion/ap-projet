@@ -7,6 +7,8 @@ Dialog_assign_task_to_team::Dialog_assign_task_to_team(QWidget *parent)
     , ui(new Ui::Dialog_assign_task_to_team)
 {
     ui->setupUi(this);
+    setMinimumSize(400,300);
+    setMaximumSize(400,300);
 }
 
 Dialog_assign_task_to_team::~Dialog_assign_task_to_team()
@@ -43,7 +45,7 @@ void Dialog_assign_task_to_team::on_assign_tasks_to_team_clicked()
             flag = 1;
     }
     if(flag == 0 ){
-        QMessageBox::warning(this, "تذکر", " تیمی بااین نام یافت نشد!");
+       QMessageBox::warning(this, "error!", " No team found with this name!");
         return;
 
     }
@@ -55,7 +57,7 @@ void Dialog_assign_task_to_team::on_assign_tasks_to_team_clicked()
             flag4 = 1;
     }
     if(flag4 == 0 ){
-        QMessageBox::warning(this, "تذکر", " وظیفه ای با این نام یاقت نشد!");
+        QMessageBox::warning(this, "error", " There was no task with this name!");
         return;
 
 
