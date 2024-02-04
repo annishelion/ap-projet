@@ -6,6 +6,8 @@
 #include <QMainWindow>
 #include <QString>
 #include <QVector>
+#include <map>
+
 class task{
 private:
     QString username_of_creator= "";
@@ -14,9 +16,13 @@ private:
     QString project_Respons_the_task = "";
     QString team_Respons_the_task = "";
     QString priority = "";
+
     bool is_archive = 0;
+QVector<QString> comments;
 
 public:
+QVector<QString> get_comments(){return comments;}
+void add_comment(QString com ){comments.append(com);}
     bool get_is_archive(){return is_archive;}
         void set_is_archive(bool b){is_archive = b;}
     task(QString _name , QString _prio);

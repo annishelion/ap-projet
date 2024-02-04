@@ -153,6 +153,12 @@ temp2["team respons"] = u.get_team_Respons_the_task();
 temp2["user respons"] = u.get_user_Respons_the_task();
 temp2["username creator"] = u.get_username_of_cteator();
 temp2["archive"] = u.get_is_archive();
+//QVector<QString> comments;
+QJsonArray arr66;
+for(int c =0 ; c < u.get_comments().size() ; c++)
+    arr66.append(u.get_comments()[c]);
+
+temp2["comment"] = arr66;
 oo[u.get_name_of_task()] = temp2;
 }
 dd.setObject(oo);
@@ -172,18 +178,26 @@ organization orr = Data::get_organs()[q];
 temp4["name of organ"] =orr.get_name_of_organ();
 //temp["archive"] = get_iterator_organ()->get_member_of_organ();
 QJsonArray arr4;
+for(int c =0 ; c < orr.get_member_of_organ().size() ; c++)
+    arr4.append(orr.get_member_of_organ()[c]);
 
 temp4["users of organ"] = arr4;
 //temp["archive"] = get_iterator_organ()->get_organ_of_organ();
 QJsonArray arr5;
+for(int c =0 ; c < orr.get_organ_of_organ().size() ; c++)
+    arr5.append(orr.get_organ_of_organ()[c]);
 
 temp4["organ of organ"] = arr5;
 //temp["archive"] = get_iterator_organ()->get_project_of_organ();
 QJsonArray arr6;
+for(int c =0 ; c < orr.get_project_of_organ().size() ; c++)
+    arr6.append(orr.get_project_of_organ()[c]);
 
 temp4["projects of organ"] = arr6;
 //temp["archive"] = get_iterator_organ()->get_teams_of_organ();
 QJsonArray arr7;
+for(int c =0 ; c < orr.get_teams_of_organ().size() ; c++)
+    arr7.append(orr.get_teams_of_organ()[c]);
 
 temp4["teams of organ"] = arr7;
 
@@ -209,14 +223,20 @@ temp5["name of project"] =pr.get_name_of_project();
 temp5["situation"] = pr.get_situation();
 //temp["archive"] = ;
 QJsonArray arr;
+for(int c =0 ; c < pr.get_users_of_project().size() ; c++)
+    arr.append(pr.get_users_of_project()[c]);
 
 temp5["users of project"] = arr;
 //temp["archive"] = get_iterator_pro()->add_task_to_project();
 QJsonArray arr2;
+for(int c =0 ; c < pr.get_task_of_project().size() ; c++)
+    arr2.append(pr.get_task_of_project()[c]);
 
 temp5["tasks of project"] = arr2;
 //temp["archive"] = get_iterator_pro()->get_team_of_project();
 QJsonArray arr3;
+for(int c =0 ; c < pr.get_team_of_project().size() ; c++)
+    arr3.append(pr.get_team_of_project()[c]);
 
 temp5["teams of project"] = arr3;
 ooooo[pr.get_name_of_project()] = temp5;
@@ -239,6 +259,9 @@ team te = Data::get_teams()[ii];
 temp3["name of team"] = te.get_name_of_team();
 //temp["archive"] = 0;
 QJsonArray arr8;
+for(int c =0 ; c < te.get_members_of_team().size() ; c++)
+    arr8.append(te.get_members_of_team()[c]);
+
 arr8.append(Data::get_onlineId());
 temp3["users of team"] = arr8;
 ooo[te.get_name_of_team()] = temp3;

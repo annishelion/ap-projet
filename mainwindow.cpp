@@ -63,6 +63,11 @@ MainWindow::MainWindow(QWidget *parent)
            tas.set_user_Respons_the_task(temp2["user respons"].toString());
            tas.set_uesr_name_of_creator(temp2["username creator"].toString());
            tas.set_is_archive(temp2["archive"].toInt());
+//QVector<QString> comments;
+           QJsonArray arra = temp2["comment"].toArray();
+           for (int i = 0; i < arra.size(); i++)
+               tas.add_comment(arra[i].toString());
+
 
        Data::get_tasks().append(tas);
       }
